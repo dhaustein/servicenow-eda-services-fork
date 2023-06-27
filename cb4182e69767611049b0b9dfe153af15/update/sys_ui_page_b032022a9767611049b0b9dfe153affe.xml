@@ -60,7 +60,7 @@ padding: 0.5em;
 
 <g:ui_form>
 <fieldset>
-<legend>Which service you want to monitor? </legend>
+<legend>Which table do you want to monitor? </legend>
 <table>
 	<tr>
 		<td>
@@ -69,22 +69,22 @@ padding: 0.5em;
 		<j:if test="${jvar_incident_when.equals('approved')}">
 			<td>
 				<label>
-					<input name="incident_when" value="approved" type="radio" checked="true"/>By Approved
+					<input name="incident_when" value="approved" type="radio" checked="true"/>When Approved
 				</label>
 			</td>
 			<td>
 				<label>
-					<input name="incident_when" value="created" type="radio"/>By Created
+					<input name="incident_when" value="created" type="radio"/>When Created
 				</label>
 			</td>
 		</j:if>
 		<j:if test="${jvar_incident_when.equals('created')}">
 			<td>
-				<label><input name="incident_when" value="approved" type="radio"/>By Approved</label>
+				<label><input name="incident_when" value="approved" type="radio"/>When Approved</label>
 			</td>
 			<td>
 				<label>
-					<input name="incident_when" value="created" type="radio" checked="true"/>By Created
+					<input name="incident_when" value="created" type="radio" checked="true"/>When Created
 				</label>
 			</td>
 		</j:if>
@@ -96,49 +96,49 @@ padding: 0.5em;
 		<j:if test="${jvar_problem_when.equals('approved')}">
 			<td>
 				<label>
-					<input name="problem_when" value="approved" type="radio" checked="true"/>By Approved
+					<input name="problem_when" value="approved" type="radio" checked="true"/>When Approved
 				</label>
 			</td>
 			<td>
 				<label>
-					<input name="problem_when" value="created" type="radio"/>By Created
+					<input name="problem_when" value="created" type="radio"/>When Created
 				</label>
 			</td>
 		</j:if>
 		<j:if test="${jvar_problem_when.equals('created')}">
 			<td>
-				<label><input name="problem_when" value="approved" type="radio"/>By Approved</label>
+				<label><input name="problem_when" value="approved" type="radio"/>When Approved</label>
 			</td>
 			<td>
 				<label>
-					<input name="problem_when" value="created" type="radio" checked="true"/>By Created
+					<input name="problem_when" value="created" type="radio" checked="true"/>When Created
 				</label>
 			</td>
 		</j:if>
 	</tr>
 	<tr>
 		<td>
-			<label style="font-size: 1.2em;"><g:ui_checkbox name="check_catalog" value="${jvar_check_catalog}"/>Catalog</label>
+			<label style="font-size: 1.2em;"><g:ui_checkbox name="check_catalog" value="${jvar_check_catalog}"/>Catalog Request</label>
 		</td>
 		<j:if test="${jvar_catalog_when.equals('approved')}">
 			<td>
 				<label>
-					<input name="catalog_when" value="approved" type="radio" checked="true"/>By Approved
+					<input name="catalog_when" value="approved" type="radio" checked="true"/>When Approved
 				</label>
 			</td>
 			<td>
 				<label>
-					<input name="catalog_when" value="created" type="radio"/>By Created
+					<input name="catalog_when" value="created" type="radio"/>When Created
 				</label>
 			</td>
 		</j:if>
 		<j:if test="${jvar_catalog_when.equals('created')}">
 			<td>
-				<label><input name="catalog_when" value="approved" type="radio"/>By Approved</label>
+				<label><input name="catalog_when" value="approved" type="radio"/>When Approved</label>
 			</td>
 			<td>
 				<label>
-					<input name="catalog_when" value="created" type="radio" checked="true"/>By Created
+					<input name="catalog_when" value="created" type="radio" checked="true"/>When Created
 				</label>
 			</td>
 		</j:if>
@@ -215,7 +215,7 @@ gs.setProperty("x_1070098_my_eda_0.problem_when", problem_when);]]></processing_
         <sys_created_on>2023-06-23 15:39:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b032022a9767611049b0b9dfe153affe</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
         <sys_package display_value="My EDA" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
@@ -223,6 +223,6 @@ gs.setProperty("x_1070098_my_eda_0.problem_when", problem_when);]]></processing_
         <sys_scope display_value="My EDA">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_b032022a9767611049b0b9dfe153affe</sys_update_name>
         <sys_updated_by>hui_song</sys_updated_by>
-        <sys_updated_on>2023-06-27 16:09:55</sys_updated_on>
+        <sys_updated_on>2023-06-27 20:49:28</sys_updated_on>
     </sys_ui_page>
 </record_update>
