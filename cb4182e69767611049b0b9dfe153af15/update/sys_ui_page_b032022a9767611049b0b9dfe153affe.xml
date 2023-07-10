@@ -7,29 +7,29 @@
         <endpoint>x_1070098_my_eda_0_eda_configuration.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
-<g:evaluate var="jvar_check_incident"> 
-   var check_incident = gs.getProperty('x_1070098_my_eda_0.check_incident'); 
-   check_incident; 
+<g:evaluate var="jvar_check_incident_created"> 
+   var check_incident_created = gs.getProperty('x_1070098_my_eda_0.check_incident_created'); 
+   check_incident_created; 
 </g:evaluate>
-<g:evaluate var="jvar_check_problem"> 
-   var check_problem = gs.getProperty('x_1070098_my_eda_0.check_problem'); 
-   check_problem; 
+<g:evaluate var="jvar_check_problem_created"> 
+   var check_problem_created = gs.getProperty('x_1070098_my_eda_0.check_problem_created'); 
+   check_problem_created; 
 </g:evaluate>
-<g:evaluate var="jvar_check_catalog"> 
-   var check_catalog = gs.getProperty('x_1070098_my_eda_0.check_catalog'); 
-   check_catalog; 
+<g:evaluate var="jvar_check_catalog_created"> 
+   var check_catalog_created = gs.getProperty('x_1070098_my_eda_0.check_catalog_created'); 
+   check_catalog_created; 
 </g:evaluate>
-<g:evaluate var="jvar_incident_when"> 
-   var incident_when = gs.getProperty('x_1070098_my_eda_0.incident_when'); 
-   incident_when; 
+<g:evaluate var="jvar_check_incident_state"> 
+   var check_incident_state = gs.getProperty('x_1070098_my_eda_0.check_incident_state'); 
+   check_incident_state; 
 </g:evaluate>
-<g:evaluate var="jvar_problem_when"> 
-   var problem_when = gs.getProperty('x_1070098_my_eda_0.problem_when'); 
-   problem_when; 
+<g:evaluate var="jvar_check_problem_state"> 
+   var check_problem_state = gs.getProperty('x_1070098_my_eda_0.check_problem_state'); 
+   check_problem_state; 
 </g:evaluate>
-<g:evaluate var="jvar_catalog_when"> 
-   var catalog_when = gs.getProperty('x_1070098_my_eda_0.catalog_when'); 
-   catalog_when; 
+<g:evaluate var="jvar_check_catalog_approved"> 
+   var check_catalog_approved = gs.getProperty('x_1070098_my_eda_0.check_catalog_approved'); 
+   check_catalog_approved; 
 </g:evaluate>
 <style>	
 legend {
@@ -64,84 +64,36 @@ padding: 0.5em;
 <table>
 	<tr>
 		<td>
-			<label style="font-size: 1.2em;"><g:ui_checkbox name="check_incident" value="${jvar_check_incident}"/>Incident</label>
+			<label style="font-size: 1.2em;">Incident</label>
 		</td>
-		<j:if test="${jvar_incident_when.equals('approved')}">
-			<td>
-				<label>
-					<input name="incident_when" value="approved" type="radio" checked="true"/>When Approved
-				</label>
-			</td>
-			<td>
-				<label>
-					<input name="incident_when" value="created" type="radio"/>When Created
-				</label>
-			</td>
-		</j:if>
-		<j:if test="${jvar_incident_when.equals('created')}">
-			<td>
-				<label><input name="incident_when" value="approved" type="radio"/>When Approved</label>
-			</td>
-			<td>
-				<label>
-					<input name="incident_when" value="created" type="radio" checked="true"/>When Created
-				</label>
-			</td>
-		</j:if>
+		<td>
+			<label><g:ui_checkbox name="check_incident_state" value="${jvar_check_incident_state}"/>When State Changed</label>
+		</td>
+		<td>
+			<label><g:ui_checkbox name="check_incident_created" value="${jvar_check_incident_created}"/>When Created</label>
+		</td>
 	</tr>
 	<tr>
 		<td>
-			<label style="font-size: 1.2em;"><g:ui_checkbox name="check_problem" value="${jvar_check_problem}"/>Problem</label>
+			<label style="font-size: 1.2em;">Problem</label>
 		</td>
-		<j:if test="${jvar_problem_when.equals('approved')}">
-			<td>
-				<label>
-					<input name="problem_when" value="approved" type="radio" checked="true"/>When Approved
-				</label>
-			</td>
-			<td>
-				<label>
-					<input name="problem_when" value="created" type="radio"/>When Created
-				</label>
-			</td>
-		</j:if>
-		<j:if test="${jvar_problem_when.equals('created')}">
-			<td>
-				<label><input name="problem_when" value="approved" type="radio"/>When Approved</label>
-			</td>
-			<td>
-				<label>
-					<input name="problem_when" value="created" type="radio" checked="true"/>When Created
-				</label>
-			</td>
-		</j:if>
+		<td>
+			<label><g:ui_checkbox name="check_problem_state" value="${jvar_check_problem_state}"/>When State Changed</label>
+		</td>
+		<td>
+			<label><g:ui_checkbox name="check_problem_created" value="${jvar_check_problem_created}"/>When Created</label>
+		</td>
 	</tr>
 	<tr>
 		<td>
-			<label style="font-size: 1.2em;"><g:ui_checkbox name="check_catalog" value="${jvar_check_catalog}"/>Catalog Request</label>
+			<label style="font-size: 1.2em;">Catalog Request</label>
 		</td>
-		<j:if test="${jvar_catalog_when.equals('approved')}">
-			<td>
-				<label>
-					<input name="catalog_when" value="approved" type="radio" checked="true"/>When Approved
-				</label>
-			</td>
-			<td>
-				<label>
-					<input name="catalog_when" value="created" type="radio"/>When Created
-				</label>
-			</td>
-		</j:if>
-		<j:if test="${jvar_catalog_when.equals('created')}">
-			<td>
-				<label><input name="catalog_when" value="approved" type="radio"/>When Approved</label>
-			</td>
-			<td>
-				<label>
-					<input name="catalog_when" value="created" type="radio" checked="true"/>When Created
-				</label>
-			</td>
-		</j:if>
+		<td>
+			<label><g:ui_checkbox name="check_catalog_approved" value="${jvar_check_catalog_approved}"/>When Approved</label>
+		</td>
+		<td>
+			<label><g:ui_checkbox name="check_catalog_created" value="${jvar_check_catalog_created}"/>When Created</label>
+		</td>
 	</tr>
 <!-- 
 	<tr>
@@ -172,7 +124,6 @@ font-weight: bold;font-size: 1.2em; padding: 0.5em;">
 -->
 </table>
 </fieldset>
-<br></br>
 <fieldset>
 
 <j:if test="${jvar_check_catalog}">
@@ -184,45 +135,61 @@ font-weight: bold;font-size: 1.2em; padding: 0.5em;">
 </p>
 </j:if>
 </fieldset>
+<br></br>
 <fieldset>
-<legend>Click OK to save the configuration.</legend>
-<g:dialog_buttons_ok_cancel ok="return true"/>
-<input type="hidden" name="application_sys_id" value="cb4182e69767611049b0b9dfe153af15"/>
+	<div><label style="font-size: 1.2em;">Click OK to save the configuration.</label></div>
+	<g:dialog_buttons_ok_cancel ok="return true"/>
+	<input type="hidden" name="application_sys_id" value="cb4182e69767611049b0b9dfe153af15"/>
 </fieldset>
+</g:ui_form>
+<br></br>
+<g:ui_form>
+	<fieldset><legend>Do you want to test webhook configuration? </legend>
+	<table>
+		<tr>
+			<td>EDA Webhook URL starting with https or http:</td>
+		</tr>
+		<tr>
+		</tr>
+	</table>
+	</fieldset>
+	<fieldset>
+		<g:dialog_buttons_ok_cancel ok="return true"/>
+	</fieldset>
 </g:ui_form>
 </body>
 </j:jelly>]]></html>
         <name>eda_configuration</name>
         <processing_script><![CDATA[//set the value of the check_incident system property 
-gs.setProperty("x_1070098_my_eda_0.check_incident", check_incident); 
+gs.setProperty("x_1070098_my_eda_0.check_incident_state", check_incident_state); 
  
 //set the value of the check_problem sys property 
-gs.setProperty("x_1070098_my_eda_0.check_problem", check_problem); 
+gs.setProperty("x_1070098_my_eda_0.check_problem_state", check_problem_state); 
  
 //set the value of the check_catalog sys property 
-gs.setProperty("x_1070098_my_eda_0.check_catalog", check_catalog); 
+gs.setProperty("x_1070098_my_eda_0.check_catalog_approved", check_catalog_approved); 
 
 //set the value of the trigger_when sys property 
-gs.setProperty("x_1070098_my_eda_0.catalog_when", catalog_when);
+gs.setProperty("x_1070098_my_eda_0.check_catalog_created", check_catalog_created);
 
 //set the value of the trigger_when sys property 
-gs.setProperty("x_1070098_my_eda_0.incident_when", incident_when);
+gs.setProperty("x_1070098_my_eda_0.check_incident_created", check_incident_created);
 
 //set the value of the trigger_when sys property 
-gs.setProperty("x_1070098_my_eda_0.problem_when", problem_when);]]></processing_script>
+gs.setProperty("x_1070098_my_eda_0.check_problem_created", check_problem_created);]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-06-23 15:39:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b032022a9767611049b0b9dfe153affe</sys_id>
-        <sys_mod_count>72</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
-        <sys_package display_value="My EDA" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="My EDA">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_b032022a9767611049b0b9dfe153affe</sys_update_name>
         <sys_updated_by>hui_song</sys_updated_by>
-        <sys_updated_on>2023-06-27 20:49:28</sys_updated_on>
+        <sys_updated_on>2023-07-10 14:41:04</sys_updated_on>
     </sys_ui_page>
 </record_update>
