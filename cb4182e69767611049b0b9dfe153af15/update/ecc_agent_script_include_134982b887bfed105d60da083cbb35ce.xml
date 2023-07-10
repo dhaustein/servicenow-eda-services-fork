@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="ecc_agent_script_include">
+    <ecc_agent_script_include action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Forward an event to the EDA webhook</description>
+        <name>EdaWebhookForward</name>
+        <script><![CDATA[var EdaWebhookForward = Class.create();
+
+EdaWebhookForward.prototype = {
+   
+  initialize: function () {
+    this.Webhook = Packages.com.redhat.ansible.eda.EdaWebhook;
+
+    this.url = probe.getParameter("url");
+    this.token = probe.getParameter("token");
+    this.data = probe.getParameter("json_data"); 
+  },
+   
+  send: function () {
+    ms.info("sending " + this.data + " to webhook");
+    return this.Webhook.sendRequest(this.url, this.token, this.data);
+  },
+   
+  type: "EdaWebhookForward"
+};]]></script>
+        <sys_class_name>ecc_agent_script_include</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-30 16:08:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>134982b887bfed105d60da083cbb35ce</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>EdaWebhookForward</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>ecc_agent_script_include_134982b887bfed105d60da083cbb35ce</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-30 19:23:21</sys_updated_on>
+    </ecc_agent_script_include>
+</record_update>

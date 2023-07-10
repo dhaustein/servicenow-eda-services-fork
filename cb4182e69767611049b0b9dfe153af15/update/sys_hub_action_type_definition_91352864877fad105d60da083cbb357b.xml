@@ -1,0 +1,2295 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Check whether the record triggers an EDA event</description>
+        <ih_action>false</ih_action>
+        <internal_name>eda_validation</internal_name>
+        <label_cache>[{"name":"{{action.record_type}}","label":"action➛Record Type","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.is_new}}","label":"action➛Is New","type":"action","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e361ddc-5480-4433-8d8e-fbd59ce20354].validation_result}}","label":"step➛Script step➛Validation Result","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master_snapshot>1a05e1e88733ed105d60da083cbb3581</master_snapshot>
+        <name>EDA Validation</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 14:00:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>91352864877fad105d60da083cbb357b</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>EDA Validation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_91352864877fad105d60da083cbb357b</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:40:04</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_variable_value action="delete_multiple" query="document_key=91352864877fad105d60da083cbb357b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>91352864877fad105d60da083cbb357b</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_id>0605e1e88733ed105d60da083cbb355b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">8e05e1e88733ed105d60da083cbb3553</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>91352864877fad105d60da083cbb357b</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_id>8a05e1e88733ed105d60da083cbb355b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">4605e1e88733ed105d60da083cbb354c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>91352864877fad105d60da083cbb357b</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_id>c605e1e88733ed105d60da083cbb355b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Need Event">c605e1e88733ed105d60da083cbb3550</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=91352864877fad105d60da083cbb357b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>variable</field>
+        <id>91352864877fad105d60da083cbb357b</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_id>0e05e1e88733ed105d60da083cbb355a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <table>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</table>
+        <value>{{step[6e361ddc-5480-4433-8d8e-fbd59ce20354].validation_result}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>91352864877fad105d60da083cbb357b</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_id>8205e1e88733ed105d60da083cbb355b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <table>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>91352864877fad105d60da083cbb357b</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_id>ce05e1e88733ed105d60da083cbb355a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <table>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=91352864877fad105d60da083cbb357b^sys_idNOT IN8e05e1e88733ed105d60da083cbb3534"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="EDA Validation">91352864877fad105d60da083cbb357b</action>
+        <cid>6e361ddc-5480-4433-8d8e-fbd59ce20354</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8e05e1e88733ed105d60da083cbb3534</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:40:02</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8e05e1e88733ed105d60da083cbb3534"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>8e05e1e88733ed105d60da083cbb3534</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_id>4605e1e88733ed105d60da083cbb3548</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:40:02</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  function validate(is_new, check_key, when_key) {
+    if(gs.getProperty(check_key) == 'true'){
+      if(is_new &amp;&amp; gs.getProperty(when_key) == 'created') {
+        return true;
+      }
+      if(!is_new &amp;&amp; gs.getProperty(when_key) == 'approved') {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  outputs.validation_result = false;
+  if(inputs.type == 'incident') {
+    outputs.validation_result = validate(inputs.is_new, 'x_1070098_my_eda_0.check_incident', 'x_1070098_my_eda_0.incident_when');
+  }
+  else if(inputs.type == 'problem') {
+    outputs.validation_result = validate(inputs.is_new, 'x_1070098_my_eda_0.check_problem', 'x_1070098_my_eda_0.problem_when');
+  }
+  else if(inputs.type == 'request') {
+    outputs.validation_result = validate(inputs.is_new, 'x_1070098_my_eda_0.check_catalog', 'x_1070098_my_eda_0.catalog_when');
+  }
+  else {
+    outputs.validation_result = false;
+  }
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>8e05e1e88733ed105d60da083cbb3534</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_id>8205e1e88733ed105d60da083cbb3548</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>8e05e1e88733ed105d60da083cbb3534</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_id>c205e1e88733ed105d60da083cbb3549</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">4e05e1e88733ed105d60da083cbb353e</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8e05e1e88733ed105d60da083cbb3534"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>8e05e1e88733ed105d60da083cbb3534</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_id>4e05e1e88733ed105d60da083cbb3547</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>is_new</field>
+        <id>8e05e1e88733ed105d60da083cbb3534</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_id>4205e1e88733ed105d60da083cbb3549</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_8e05e1e88733ed105d60da083cbb3534</table>
+        <value>{{action.is_new}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>8e05e1e88733ed105d60da083cbb3534</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_id>0205e1e88733ed105d60da083cbb3548</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>type</field>
+        <id>8e05e1e88733ed105d60da083cbb3534</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_id>8e05e1e88733ed105d60da083cbb3548</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_8e05e1e88733ed105d60da083cbb3534</table>
+        <value>{{action.record_type}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_8e05e1e88733ed105d60da083cbb3534^id=8e05e1e88733ed105d60da083cbb3534"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=8e05e1e88733ed105d60da083cbb3534"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=8e05e1e88733ed105d60da083cbb3534^sys_idNOT IN4e05e1e88733ed105d60da083cbb353e,c205e1e88733ed105d60da083cbb353c"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>is_new</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">8e05e1e88733ed105d60da083cbb3534</model>
+        <model_id>8e05e1e88733ed105d60da083cbb3534</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_8e05e1e88733ed105d60da083cbb3534</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4e05e1e88733ed105d60da083cbb353e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">8e05e1e88733ed105d60da083cbb3534</model>
+        <model_id>8e05e1e88733ed105d60da083cbb3534</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_8e05e1e88733ed105d60da083cbb3534</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c205e1e88733ed105d60da083cbb353c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=8e05e1e88733ed105d60da083cbb3534^sys_idNOT IN8605e1e88733ed105d60da083cbb3541"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=4606057a-b9dc-4dd3-ae5c-7ccf498d8160</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>validation_result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Validation Result</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">8e05e1e88733ed105d60da083cbb3534</model>
+        <model_id>8e05e1e88733ed105d60da083cbb3534</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_8e05e1e88733ed105d60da083cbb3534</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8605e1e88733ed105d60da083cbb3541</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8e05e1e88733ed105d60da083cbb3534"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_8e05e1e88733ed105d60da083cbb3534^sys_idNOT INc205e1e88733ed105d60da083cbb3544"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>validation_result</element>
+        <help/>
+        <hint/>
+        <label>Validation Result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_8e05e1e88733ed105d60da083cbb3534</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c205e1e88733ed105d60da083cbb3544</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=91352864877fad105d60da083cbb357b^sys_idNOT IN8205e1e88733ed105d60da083cbb352c,8205e1e88733ed105d60da083cbb3530"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ad205ce4-c695-41e0-a233-3a249e0b2ad1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Record Type</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EDA Validation">91352864877fad105d60da083cbb357b</model>
+        <model_id>91352864877fad105d60da083cbb357b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_91352864877fad105d60da083cbb357b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8205e1e88733ed105d60da083cbb352c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8205e1e88733ed105d60da083cbb352c"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=2ada5290-8233-411f-a98c-81cf8dc21cd3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>is_new</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Is New</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="EDA Validation">91352864877fad105d60da083cbb357b</model>
+        <model_id>91352864877fad105d60da083cbb357b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_91352864877fad105d60da083cbb357b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8205e1e88733ed105d60da083cbb3530</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8205e1e88733ed105d60da083cbb3530"/>
+    <sys_hub_action_output action="delete_multiple" query="model=91352864877fad105d60da083cbb357b^sys_idNOT IN4605e1e88733ed105d60da083cbb354c,8e05e1e88733ed105d60da083cbb3553,c605e1e88733ed105d60da083cbb3550"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=515b6095-6788-487c-a133-e0c3bbbeffed</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="EDA Validation">91352864877fad105d60da083cbb357b</model>
+        <model_id>91352864877fad105d60da083cbb357b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4605e1e88733ed105d60da083cbb354c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4605e1e88733ed105d60da083cbb354c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4605e1e88733ed105d60da083cbb354c"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=585b4873-5946-481b-828c-d199eec5759c,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="EDA Validation">91352864877fad105d60da083cbb357b</model>
+        <model_id>91352864877fad105d60da083cbb357b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8e05e1e88733ed105d60da083cbb3553</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:40:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8e05e1e88733ed105d60da083cbb3553"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8e05e1e88733ed105d60da083cbb3553"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=6a73ca1a-66f6-4029-9fc3-7ac1aadd6ee0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>variable</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Need Event</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="EDA Validation">91352864877fad105d60da083cbb357b</model>
+        <model_id>91352864877fad105d60da083cbb357b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c605e1e88733ed105d60da083cbb3550</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c605e1e88733ed105d60da083cbb3550"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c605e1e88733ed105d60da083cbb3550"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=91352864877fad105d60da083cbb357b"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=91352864877fad105d60da083cbb357b^sys_idNOT INca05e1e88733ed105d60da083cbb355d"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="EDA Validation">91352864877fad105d60da083cbb357b</action_type_id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_id>ca05e1e88733ed105d60da083cbb355d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=ca05e1e88733ed105d60da083cbb355d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_91352864877fad105d60da083cbb357b^sys_idNOT IN8e05e1e88733ed105d60da083cbb3532,c605e1e88733ed105d60da083cbb352f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>is_new</element>
+        <help/>
+        <hint/>
+        <label>Is New</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_91352864877fad105d60da083cbb357b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8e05e1e88733ed105d60da083cbb3532</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>record_type</element>
+        <help/>
+        <hint/>
+        <label>Record Type</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_91352864877fad105d60da083cbb357b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c605e1e88733ed105d60da083cbb352f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_91352864877fad105d60da083cbb357b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b^sys_idNOT IN0e05e1e88733ed105d60da083cbb354f,c205e1e88733ed105d60da083cbb3553,c205e1e88733ed105d60da083cbb3558"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0e05e1e88733ed105d60da083cbb354f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>variable</element>
+        <help/>
+        <hint/>
+        <label>Need Event</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c205e1e88733ed105d60da083cbb3553</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c205e1e88733ed105d60da083cbb3558</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=91352864877fad105d60da083cbb357b^sys_idNOT IN3a0525e88733ed105d60da083cbb3515"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="EDA Validation">91352864877fad105d60da083cbb357b</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"3a0525e88733ed105d60da083cbb3515","name":"plan","plan_signature":null}}</plan>
+        <snapshot>fe3529e88733ed105d60da083cbb351d</snapshot>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>3a0525e88733ed105d60da083cbb3515</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:40:05</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Check whether the record triggers an EDA event</description>
+        <internal_name>eda_validation</internal_name>
+        <label_cache>[{"name":"{{action.record_type}}","label":"action➛Record Type","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.is_new}}","label":"action➛Is New","type":"action","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e361ddc-5480-4433-8d8e-fbd59ce20354].validation_result}}","label":"step➛Script step➛Validation Result","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master>true</master>
+        <name>EDA Validation</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="EDA Validation">91352864877fad105d60da083cbb357b</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>1a05e1e88733ed105d60da083cbb3581</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=1a05e1e88733ed105d60da083cbb3581"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>1a05e1e88733ed105d60da083cbb3581</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:15</sys_created_on>
+        <sys_id>2a05e1e88733ed105d60da083cbb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">6a05e1e88733ed105d60da083cbb35a2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>1a05e1e88733ed105d60da083cbb3581</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:15</sys_created_on>
+        <sys_id>6605e1e88733ed105d60da083cbb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Need Event">6a05e1e88733ed105d60da083cbb35a6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>1a05e1e88733ed105d60da083cbb3581</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:15</sys_created_on>
+        <sys_id>a205e1e88733ed105d60da083cbb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">ae05e1e88733ed105d60da083cbb35a9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1a05e1e88733ed105d60da083cbb3581"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>variable</field>
+        <id>1a05e1e88733ed105d60da083cbb3581</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:15</sys_created_on>
+        <sys_id>aa05e1e88733ed105d60da083cbb35b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</table>
+        <value>{{step[6e361ddc-5480-4433-8d8e-fbd59ce20354].validation_result}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>1a05e1e88733ed105d60da083cbb3581</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:15</sys_created_on>
+        <sys_id>2205e1e88733ed105d60da083cbb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>1a05e1e88733ed105d60da083cbb3581</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:15</sys_created_on>
+        <sys_id>6e05e1e88733ed105d60da083cbb35b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=1a05e1e88733ed105d60da083cbb3581^sys_idNOT IN9605e1e88733ed105d60da083cbb358d"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</action>
+        <cid>6e361ddc-5480-4433-8d8e-fbd59ce20354</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9605e1e88733ed105d60da083cbb358d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:40:04</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9605e1e88733ed105d60da083cbb358d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9605e1e88733ed105d60da083cbb358d</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_id>2a05e1e88733ed105d60da083cbb359e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:40:04</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  function validate(is_new, check_key, when_key) {
+    if(gs.getProperty(check_key) == 'true'){
+      if(is_new &amp;&amp; gs.getProperty(when_key) == 'created') {
+        return true;
+      }
+      if(!is_new &amp;&amp; gs.getProperty(when_key) == 'approved') {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  outputs.validation_result = false;
+  if(inputs.type == 'incident') {
+    outputs.validation_result = validate(inputs.is_new, 'x_1070098_my_eda_0.check_incident', 'x_1070098_my_eda_0.incident_when');
+  }
+  else if(inputs.type == 'problem') {
+    outputs.validation_result = validate(inputs.is_new, 'x_1070098_my_eda_0.check_problem', 'x_1070098_my_eda_0.problem_when');
+  }
+  else if(inputs.type == 'request') {
+    outputs.validation_result = validate(inputs.is_new, 'x_1070098_my_eda_0.check_catalog', 'x_1070098_my_eda_0.catalog_when');
+  }
+  else {
+    outputs.validation_result = false;
+  }
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9605e1e88733ed105d60da083cbb358d</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_id>6605e1e88733ed105d60da083cbb359e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9605e1e88733ed105d60da083cbb358d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_id>a605e1e88733ed105d60da083cbb359f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <value>0</value>
+        <variable display_value="is_new">2605e1e88733ed105d60da083cbb3594</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9605e1e88733ed105d60da083cbb358d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>9605e1e88733ed105d60da083cbb358d</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_id>2205e1e88733ed105d60da083cbb359e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>is_new</field>
+        <id>9605e1e88733ed105d60da083cbb358d</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_id>2605e1e88733ed105d60da083cbb359f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_9605e1e88733ed105d60da083cbb358d</table>
+        <value>{{action.is_new}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>9605e1e88733ed105d60da083cbb358d</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_id>e205e1e88733ed105d60da083cbb359e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>type</field>
+        <id>9605e1e88733ed105d60da083cbb358d</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_id>6205e1e88733ed105d60da083cbb359f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_9605e1e88733ed105d60da083cbb358d</table>
+        <value>{{action.record_type}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_9605e1e88733ed105d60da083cbb358d^id=9605e1e88733ed105d60da083cbb358d"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=9605e1e88733ed105d60da083cbb358d"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=9605e1e88733ed105d60da083cbb358d^sys_idNOT IN2605e1e88733ed105d60da083cbb3594,2e05e1e88733ed105d60da083cbb3590"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>is_new</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>is_new</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">9605e1e88733ed105d60da083cbb358d</model>
+        <model_id>9605e1e88733ed105d60da083cbb358d</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_9605e1e88733ed105d60da083cbb358d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2605e1e88733ed105d60da083cbb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>type</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">9605e1e88733ed105d60da083cbb358d</model>
+        <model_id>9605e1e88733ed105d60da083cbb358d</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_9605e1e88733ed105d60da083cbb358d</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2e05e1e88733ed105d60da083cbb3590</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=9605e1e88733ed105d60da083cbb358d^sys_idNOT INaa05e1e88733ed105d60da083cbb3597"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=4606057a-b9dc-4dd3-ae5c-7ccf498d8160</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>validation_result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Validation Result</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">9605e1e88733ed105d60da083cbb358d</model>
+        <model_id>9605e1e88733ed105d60da083cbb358d</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_9605e1e88733ed105d60da083cbb358d</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>aa05e1e88733ed105d60da083cbb3597</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9605e1e88733ed105d60da083cbb358d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_9605e1e88733ed105d60da083cbb358d^sys_idNOT INe605e1e88733ed105d60da083cbb359a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>validation_result</element>
+        <help/>
+        <hint/>
+        <label>Validation Result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_9605e1e88733ed105d60da083cbb358d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e605e1e88733ed105d60da083cbb359a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=1a05e1e88733ed105d60da083cbb3581^sys_idNOT IN9a05e1e88733ed105d60da083cbb3584,9a05e1e88733ed105d60da083cbb3588"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ad205ce4-c695-41e0-a233-3a249e0b2ad1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Record Type</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</model>
+        <model_id>1a05e1e88733ed105d60da083cbb3581</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9a05e1e88733ed105d60da083cbb3584</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9a05e1e88733ed105d60da083cbb3584"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=2ada5290-8233-411f-a98c-81cf8dc21cd3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>is_new</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Is New</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</model>
+        <model_id>1a05e1e88733ed105d60da083cbb3581</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9a05e1e88733ed105d60da083cbb3588</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9a05e1e88733ed105d60da083cbb3588"/>
+    <sys_hub_action_output action="delete_multiple" query="model=1a05e1e88733ed105d60da083cbb3581^sys_idNOT IN6a05e1e88733ed105d60da083cbb35a2,6a05e1e88733ed105d60da083cbb35a6,ae05e1e88733ed105d60da083cbb35a9"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=515b6095-6788-487c-a133-e0c3bbbeffed</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</model>
+        <model_id>1a05e1e88733ed105d60da083cbb3581</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6a05e1e88733ed105d60da083cbb35a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6a05e1e88733ed105d60da083cbb35a2"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6a05e1e88733ed105d60da083cbb35a2"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=6a73ca1a-66f6-4029-9fc3-7ac1aadd6ee0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>variable</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Need Event</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</model>
+        <model_id>1a05e1e88733ed105d60da083cbb3581</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6a05e1e88733ed105d60da083cbb35a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6a05e1e88733ed105d60da083cbb35a6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6a05e1e88733ed105d60da083cbb35a6"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=585b4873-5946-481b-828c-d199eec5759c,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</model>
+        <model_id>1a05e1e88733ed105d60da083cbb3581</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ae05e1e88733ed105d60da083cbb35a9</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:40:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ae05e1e88733ed105d60da083cbb35a9"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ae05e1e88733ed105d60da083cbb35a9"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=1a05e1e88733ed105d60da083cbb3581"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=1a05e1e88733ed105d60da083cbb3581^sys_idNOT INea05e1e88733ed105d60da083cbb35b3"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</action_type_id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:15</sys_created_on>
+        <sys_id>ea05e1e88733ed105d60da083cbb35b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=ea05e1e88733ed105d60da083cbb35b3"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581^sys_idNOT IN1605e1e88733ed105d60da083cbb358b,de05e1e88733ed105d60da083cbb3587"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>is_new</element>
+        <help/>
+        <hint/>
+        <label>Is New</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1605e1e88733ed105d60da083cbb358b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>record_type</element>
+        <help/>
+        <hint/>
+        <label>Record Type</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>de05e1e88733ed105d60da083cbb3587</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581^sys_idNOT IN6205e1e88733ed105d60da083cbb35ae,ae05e1e88733ed105d60da083cbb35a5,e205e1e88733ed105d60da083cbb35a9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6205e1e88733ed105d60da083cbb35ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ae05e1e88733ed105d60da083cbb35a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>variable</element>
+        <help/>
+        <hint/>
+        <label>Need Event</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e205e1e88733ed105d60da083cbb35a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>91352864877fad105d60da083cbb357b</sys_id>
+        <latest_snapshot>1a05e1e88733ed105d60da083cbb3581</latest_snapshot>
+        <compiler_build>glide-utah-12-21-2022__patch1-hotfix1b-05-01-2023_05-15-2023_1848.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>
