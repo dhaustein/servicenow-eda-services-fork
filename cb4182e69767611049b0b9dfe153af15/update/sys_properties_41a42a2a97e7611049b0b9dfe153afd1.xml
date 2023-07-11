@@ -12,7 +12,7 @@
         <sys_created_on>2023-06-23 18:09:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>41a42a2a97e7611049b0b9dfe153afd1</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>x_1070098_my_eda_0.check_catalog_created</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
@@ -20,9 +20,9 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_properties_41a42a2a97e7611049b0b9dfe153afd1</sys_update_name>
         <sys_updated_by>hui_song</sys_updated_by>
-        <sys_updated_on>2023-07-10 14:17:44</sys_updated_on>
+        <sys_updated_on>2023-07-10 15:17:52</sys_updated_on>
         <type>boolean</type>
-        <value>null</value>
+        <value>true</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=41a42a2a97e7611049b0b9dfe153afd1"/>
