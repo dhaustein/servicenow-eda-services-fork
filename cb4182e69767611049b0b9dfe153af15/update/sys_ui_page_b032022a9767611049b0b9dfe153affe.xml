@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[var delay = 3000; //3 seconds
-var retry = 2;
+        <client_script><![CDATA[var delay = 1000; //1 second
+var retry = 5;
 var url = document.getElementById("webhook_url").value;
 var token = document.getElementById("webhook_token").value;
 var mid_server = document.getElementById("mid_server").value;
+var status;
 
 function insert_record() {
     var urlParam = '<parameter name="url" value="' + url + '" />';
@@ -37,9 +38,8 @@ function check_record(request_id) {
     if (response.next()) {
         var parser = new DOMParser();
         var xmlDoc = parser.parseFromString(response.payload, "text/xml");
-        status = xmlDoc.getElementsByTagName("output")[0].textContent;
-		alert(status);
         var output = document.getElementById("output");
+        status = xmlDoc.getElementsByTagName("output")[0].textContent;
         if (status == "200")
             alert("Webhook configuration test status: succeeded!");
         //output.innerHTML = "<label>Webhook configuration status: " + status + "</label>";
@@ -48,14 +48,38 @@ function check_record(request_id) {
     //output.innerHTML = "<label style='color:red'>Webhook configuration status: " + status + "</label>";
 }
 
+function direct_send(url, token, event_body) {
+    var req = new sn_ws.RESTMessageV2();
+    req.setEndpoint(url);
+    req.setHttpMethod("post");
+    req.setRequestHeader("Authorization", "Bearer " + token);
+    req.setRequestBody(body);
+    var response = req.execute();
+    status = response.getStatusCode();
+    gs.info("Webhook HTTP status response: " + status);
+}
+
 function webhook_test() {
-    id = insert_record();
+    if (mid_server) {
+        id = insert_record();
 
-    timeout = setTimeout(function() {
-        check_record(id);
-    }, delay);
-
-	//clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            for (i = 0; i < retry; i++) {
+                alert(i);
+                check_record(id);
+                if (status == "200")
+                    break;
+            }
+            clearTimeout(timeout);
+        }, delay);
+    } else {
+		var body = "{&quot;Hello&quot;:&quot;World&quot;}";
+        direct_send(url, token, body);
+        if (status == "200")
+            alert("Webhook configuration test status: succeeded!");
+        else
+            alert("Webhook configuration test status: failed! Try again!");
+    }
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -118,13 +142,16 @@ width: 80%
 }
 input {
 padding: 0.5em;
+}	
+table {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 </style>
 
 <h1> Event Driven Ansible Configurations</h1>
 
 <body>
-
+<br></br>
 <g:ui_form>
 <fieldset>
 <legend>Which table do you want to monitor? </legend>
@@ -203,15 +230,10 @@ font-weight: bold;font-size: 1.2em; padding: 0.5em;">
 </j:if>
 </fieldset>
 <br></br>
-<fieldset>
-	<div><label style="font-size: 1.2em;">Click OK to save the configuration.</label></div>
-	<g:dialog_buttons_ok_cancel ok="return true" cancel="return false"/>
-	<input type="hidden" name="application_sys_id" value="cb4182e69767611049b0b9dfe153af15"/>
-	<input type="hidden" id="cancelled" name="cancelled" value="false"/>
-</fieldset>
-</g:ui_form>
-<br></br>
-<fieldset><legend>Do you want to test webhook configuration? </legend>
+<fieldset><legend>Webhook Configurations</legend>
+	<table style="border-spacing: 30px;">
+		<tr>
+			<td style="padding: 15px;">
 	<table>
 		<tr>
 			<td><label>EDA Webhook URL starting with https or http:</label></td>
@@ -226,12 +248,21 @@ font-weight: bold;font-size: 1.2em; padding: 0.5em;">
 			<td><input type="text" name="mid_server" id="mid_server" size="50" value="${jvar_mid_server}"/></td>
 		</tr>
 	</table>
+			</td>
+			<td  style="padding: 15px;">
+				<g:dialog_button onclick="webhook_test()" type="button">TEST</g:dialog_button>
+			</td>
+		</tr>
+	</table>
 </fieldset>
+<br></br>
 <fieldset>
-	<div><label style="font-size: 1.2em;">Click TEST to test the webhook configuration.</label></div>
-	<p><g:dialog_button onclick="webhook_test()" type="button">TEST</g:dialog_button></p>
-	<p id="output" />
+	<div><label style="font-size: 1.2em;">Click OK to save the configuration.</label></div>
+	<g:dialog_buttons_ok_cancel ok="return true" cancel="return false"/>
+	<input type="hidden" name="application_sys_id" value="cb4182e69767611049b0b9dfe153af15"/>
+	<input type="hidden" id="cancelled" name="cancelled" value="false"/>
 </fieldset>
+</g:ui_form>
 </body>
 </j:jelly>]]></html>
         <name>eda_configuration</name>
@@ -254,19 +285,19 @@ gs.setProperty("x_1070098_my_eda_0.check_incident_created", check_incident_creat
 gs.setProperty("x_1070098_my_eda_0.check_problem_created", check_problem_created);
 
 //set the value of the trigger_when sys property 
-//gs.setProperty("x_1070098_my_eda_0.webhook_url", webhook_url);
+gs.setProperty("x_1070098_my_eda_0.webhook_url", webhook_url);
 
 //set the value of the trigger_when sys property 
-//gs.setProperty("x_1070098_my_eda_0.webhook_token", webhook_token);
+gs.setProperty("x_1070098_my_eda_0.webhook_token", webhook_token);
 
 //set the value of the trigger_when sys property 
-//gs.setProperty("x_1070098_my_eda_0.mid_server", mid_server);]]></processing_script>
+gs.setProperty("x_1070098_my_eda_0.mid_server", mid_server);]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-06-23 15:39:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b032022a9767611049b0b9dfe153affe</sys_id>
-        <sys_mod_count>191</sys_mod_count>
+        <sys_mod_count>223</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
@@ -274,6 +305,6 @@ gs.setProperty("x_1070098_my_eda_0.check_problem_created", check_problem_created
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_b032022a9767611049b0b9dfe153affe</sys_update_name>
         <sys_updated_by>hui_song</sys_updated_by>
-        <sys_updated_on>2023-07-11 13:05:47</sys_updated_on>
+        <sys_updated_on>2023-07-11 16:18:11</sys_updated_on>
     </sys_ui_page>
 </record_update>
