@@ -10,13 +10,13 @@
         <copied_from_name/>
         <description>Send event to EDA when a problem is approved</description>
         <internal_name>problem_approved</internal_name>
-        <label_cache>[{"name":"d22cff56-0320-417b-b3f8-f1ab091e311f.variable","label":"3 - Get Problem➛Problem Event","reference_display":"Problem Event","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"02e57404-dff5-4a01-a5ff-460c03366dbb"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Problem Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"problem","column_name":"sys_id"},{"name":"277f5c1e-86b4-46c6-8100-5d18c6379234.variable","label":"1 - EDA Validation➛Need Event","reference_display":"Need Event","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6a73ca1a-66f6-4029-9fc3-7ac1aadd6ee0"}}]</label_cache>
+        <label_cache>[{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Problem Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"problem","column_name":"sys_id"},{"name":"d22cff56-0320-417b-b3f8-f1ab091e311f.variable","label":"3 - Get Problem➛Problem Event","reference_display":"Problem Event","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"02e57404-dff5-4a01-a5ff-460c03366dbb"}},{"name":"Updated_1.table_name","label":"Trigger - Record Updated➛Problem Table","reference":"problem","reference_display":"Problem","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}}]</label_cache>
         <master_snapshot>18b155fa877f65505d60da083cbb35dd</master_snapshot>
-        <name>Problem Changed</name>
+        <name>Problem Updated</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id>0d173dcf87fba5505d60da083cbb35d4</remote_trigger_id>
+        <remote_trigger_id>d76ee2808740b9505d60da083cbb3587</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -29,8 +29,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>e1a930ae87ff25505d60da083cbb35e5</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Problem Changed</sys_name>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Problem Updated</sys_name>
         <sys_overrides/>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_hub_flow_e1a930ae87ff25505d60da083cbb35e5</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:37</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_variable_value action="delete_multiple" query="document_key=e1a930ae87ff25505d60da083cbb35e5"/>
@@ -57,10 +57,10 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-07 14:22:52</sys_created_on>
+        <sys_created_on>2023-07-10 20:58:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>0d173dcf87fba5505d60da083cbb35d4</sys_id>
+        <sys_id>d76ee2808740b9505d60da083cbb3587</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
@@ -70,7 +70,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:36</sys_updated_on>
         <table>problem</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
@@ -79,19 +79,19 @@
         <identifier>e1a930ae87ff25505d60da083cbb35e5</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-07 14:22:52</sys_created_on>
-        <sys_id>81173dcf87fba5505d60da083cbb35d5</sys_id>
+        <sys_created_on>2023-07-10 20:58:36</sys_created_on>
+        <sys_id>5f6ee2808740b9505d60da083cbb3587</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
-        <trigger display_value="">0d173dcf87fba5505d60da083cbb35d4</trigger>
+        <sys_updated_on>2023-07-10 20:58:36</sys_updated_on>
+        <trigger display_value="">d76ee2808740b9505d60da083cbb3587</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=e1a930ae87ff25505d60da083cbb35e5^sys_idNOT IN81173dcf87fba5505d60da083cbb35d5"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=e1a930ae87ff25505d60da083cbb35e5^sys_idNOT IN5f6ee2808740b9505d60da083cbb3587"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=e1a930ae87ff25505d60da083cbb35e5^sys_idNOT IN575a38ee87ff25505d60da083cbb3525"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
-        <flow display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</flow>
+        <flow display_value="Problem Updated">e1a930ae87ff25505d60da083cbb35e5</flow>
         <name>Updated</name>
         <remote_sys_id/>
         <sys_class_name>sys_hub_trigger_instance</sys_class_name>
@@ -99,7 +99,7 @@
         <sys_created_on>2023-07-05 20:40:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>575a38ee87ff25505d60da083cbb3525</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -107,7 +107,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:37</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -219,7 +219,7 @@
         <label>Table Name</label>
         <mandatory>false</mandatory>
         <max_length>200</max_length>
-        <model display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</model>
+        <model display_value="Problem Updated">e1a930ae87ff25505d60da083cbb35e5</model>
         <model_id>e1a930ae87ff25505d60da083cbb35e5</model_id>
         <model_table>sys_hub_flow</model_table>
         <name>var__m_sys_hub_flow_input_e1a930ae87ff25505d60da083cbb35e5</name>
@@ -243,7 +243,7 @@
         <sys_created_on>2023-07-05 20:40:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>175a38ee87ff25505d60da083cbb3520</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -251,7 +251,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:36</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -304,7 +304,7 @@
         <label>Changed Fields</label>
         <mandatory>false</mandatory>
         <max_length>4000</max_length>
-        <model display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</model>
+        <model display_value="Problem Updated">e1a930ae87ff25505d60da083cbb35e5</model>
         <model_id>e1a930ae87ff25505d60da083cbb35e5</model_id>
         <model_table>sys_hub_flow</model_table>
         <name>var__m_sys_hub_flow_input_e1a930ae87ff25505d60da083cbb35e5</name>
@@ -389,7 +389,7 @@
         <label>Record</label>
         <mandatory>true</mandatory>
         <max_length>200</max_length>
-        <model display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</model>
+        <model display_value="Problem Updated">e1a930ae87ff25505d60da083cbb35e5</model>
         <model_id>e1a930ae87ff25505d60da083cbb35e5</model_id>
         <model_table>sys_hub_flow</model_table>
         <name>var__m_sys_hub_flow_input_e1a930ae87ff25505d60da083cbb35e5</name>
@@ -413,7 +413,7 @@
         <sys_created_on>2023-07-05 20:40:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>535a38ee87ff25505d60da083cbb3519</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -421,7 +421,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:36</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -436,214 +436,201 @@
     </sys_hub_flow_input>
     <sys_hub_flow_output action="delete_multiple" query="model=e1a930ae87ff25505d60da083cbb35e5"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=e1a930ae87ff25505d60da083cbb35e5"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=e1a930ae87ff25505d60da083cbb35e5^sys_idNOT IN5b5a38ee87ff25505d60da083cbb352d,6b5a38ee87ff25505d60da083cbb353a,a35a38ee87ff25505d60da083cbb3541"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_type display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</action_type>
-        <action_type_parent/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=e1a930ae87ff25505d60da083cbb35e5"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=e1a930ae87ff25505d60da083cbb35e5^sys_idNOT IN126ea2808740b9505d60da083cbb353d"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
-        <flow display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</flow>
+        <flow display_value="Problem Updated">e1a930ae87ff25505d60da083cbb35e5</flow>
+        <inputs/>
+        <inputs/>
         <order>1</order>
         <parent_ui_id/>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <subflow display_value="Send EDA Event">3324aec48700b9505d60da083cbb3574</subflow>
+        <subflow_instance_inputs/>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:38</sys_created_on>
+        <sys_created_on>2023-07-10 20:58:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>5b5a38ee87ff25505d60da083cbb352d</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_id>126ea2808740b9505d60da083cbb353d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2023-07-07 18:04:03</sys_updated_on>
-        <ui_id>277f5c1e-86b4-46c6-8100-5d18c6379234</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=5b5a38ee87ff25505d60da083cbb352d"/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-10 20:58:37</sys_updated_on>
+        <ui_id>d6a2adc5-796c-408d-8ad5-d8ae1f79289a</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=126ea2808740b9505d60da083cbb353d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>5b5a38ee87ff25505d60da083cbb352d</document_key>
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>126ea2808740b9505d60da083cbb353d</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-10 20:58:33</sys_created_on>
+        <sys_id>9e6ea2808740b9505d60da083cbb3567</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-10 20:58:33</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait For Completion">da6ea2808740b9505d60da083cbb353d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>126ea2808740b9505d60da083cbb353d</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_id>9b5a38ee87ff25505d60da083cbb352e</sys_id>
+        <sys_created_on>2023-07-10 20:58:33</sys_created_on>
+        <sys_id>d26ea2808740b9505d60da083cbb3567</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-05 20:40:39</sys_updated_on>
-        <value>problem</value>
-        <variable display_value="Record Type">9a05e1e88733ed105d60da083cbb3584</variable>
+        <sys_updated_on>2023-07-10 20:58:33</sys_updated_on>
+        <value>check_problem_state</value>
+        <variable display_value="Trigger Type">3b24aec48700b9505d60da083cbb3576</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581^id=5b5a38ee87ff25505d60da083cbb352d"/>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=5b5a38ee87ff25505d60da083cbb352d"/>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5b5a38ee87ff25505d60da083cbb352d"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Get Problem">e618a712873f25505d60da083cbb3539</action_type>
-        <action_type_parent/>
-        <comment/>
-        <display_text/>
-        <flow display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</flow>
-        <order>3</order>
-        <parent_ui_id>17a5745d-a554-404a-9bf0-8208a3ffaedd</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>6b5a38ee87ff25505d60da083cbb353a</sys_id>
-        <sys_mod_count>14</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2023-07-07 18:04:03</sys_updated_on>
-        <ui_id>d22cff56-0320-417b-b3f8-f1ab091e311f</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=6b5a38ee87ff25505d60da083cbb353a"/>
-    <sys_element_mapping action="delete_multiple" query="id=6b5a38ee87ff25505d60da083cbb353a"/>
+    <sys_element_mapping action="delete_multiple" query="id=126ea2808740b9505d60da083cbb353d"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>problem_id</field>
-        <id>6b5a38ee87ff25505d60da083cbb353a</id>
+        <field>record_id</field>
+        <id>126ea2808740b9505d60da083cbb353d</id>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_id>a75a38ee87ff25505d60da083cbb353b</sys_id>
+        <sys_created_on>2023-07-10 20:58:33</sys_created_on>
+        <sys_id>da6ea2808740b9505d60da083cbb3566</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-05 20:40:39</sys_updated_on>
-        <table>var__m_sys_hub_action_input_e618a712873f25505d60da083cbb3539</table>
+        <sys_updated_on>2023-07-10 20:58:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3324aec48700b9505d60da083cbb3574</table>
         <value>{{Updated_1.current.sys_id}}</value>
     </sys_element_mapping>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=6b5a38ee87ff25505d60da083cbb353a"/>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6b5a38ee87ff25505d60da083cbb353a"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="EDA Webhook">2e421c148733ad105d60da083cbb3578</action_type>
-        <action_type_parent/>
-        <comment/>
-        <display_text/>
-        <flow display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</flow>
-        <order>4</order>
-        <parent_ui_id>17a5745d-a554-404a-9bf0-8208a3ffaedd</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>a35a38ee87ff25505d60da083cbb3541</sys_id>
-        <sys_mod_count>14</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2023-07-07 18:04:03</sys_updated_on>
-        <ui_id>ade33570-3167-4b80-b9ac-c9894ae82022</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=a35a38ee87ff25505d60da083cbb3541"/>
-    <sys_element_mapping action="delete_multiple" query="id=a35a38ee87ff25505d60da083cbb3541"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>Event_Data</field>
-        <id>a35a38ee87ff25505d60da083cbb3541</id>
+        <field>table_name</field>
+        <id>126ea2808740b9505d60da083cbb353d</id>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_id>ef5a38ee87ff25505d60da083cbb3541</sys_id>
+        <sys_created_on>2023-07-10 20:58:33</sys_created_on>
+        <sys_id>9e6ea2808740b9505d60da083cbb3566</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-05 20:40:39</sys_updated_on>
-        <table>var__m_sys_hub_action_input_2e421c148733ad105d60da083cbb3578</table>
-        <value>{{d22cff56-0320-417b-b3f8-f1ab091e311f.variable}}</value>
-    </sys_element_mapping>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=a35a38ee87ff25505d60da083cbb3541"/>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a35a38ee87ff25505d60da083cbb3541"/>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=e1a930ae87ff25505d60da083cbb35e5"/>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=e1a930ae87ff25505d60da083cbb35e5^sys_idNOT IN575a38ee87ff25505d60da083cbb352f"/>
-    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">9f5a38ee87ff25505d60da083cbb352e</block>
-        <comment/>
-        <connected_to/>
-        <decision_table/>
-        <decision_table_inputs/>
-        <display_text/>
-        <extended_inputs/>
-        <flow display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
-        <inputs/>
-        <inputs/>
-        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>2</order>
-        <outputs_assigned/>
-        <outputs_to_assign/>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_flow_logic</sys_class_name>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>575a38ee87ff25505d60da083cbb352f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
-        <ui_id>17a5745d-a554-404a-9bf0-8208a3ffaedd</ui_id>
-        <workflow_inputs/>
-        <workflow_reference/>
-    </sys_hub_flow_logic>
-    <sys_variable_value action="delete_multiple" query="document_key=575a38ee87ff25505d60da083cbb352f"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_flow_logic</document>
-        <document_key>575a38ee87ff25505d60da083cbb352f</document_key>
-        <order>10</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_id>175a38ee87ff25505d60da083cbb3532</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-05 20:40:39</sys_updated_on>
-        <value>Qualify to send webhook event</value>
-        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=575a38ee87ff25505d60da083cbb352f"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>condition</field>
-        <id>575a38ee87ff25505d60da083cbb352f</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_id>935a38ee87ff25505d60da083cbb3532</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-05 20:40:39</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value>{{277f5c1e-86b4-46c6-8100-5d18c6379234.variable}}=true</value>
+        <sys_updated_on>2023-07-10 20:58:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3324aec48700b9505d60da083cbb3574</table>
+        <value>{{Updated_1.table_name}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>condition_name</field>
-        <id>575a38ee87ff25505d60da083cbb352f</id>
+        <field>trigger_type</field>
+        <id>126ea2808740b9505d60da083cbb353d</id>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-05 20:40:39</sys_created_on>
-        <sys_id>df5a38ee87ff25505d60da083cbb3531</sys_id>
+        <sys_created_on>2023-07-10 20:58:33</sys_created_on>
+        <sys_id>526ea2808740b9505d60da083cbb3567</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-05 20:40:39</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <sys_updated_on>2023-07-10 20:58:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3324aec48700b9505d60da083cbb3574</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=575a38ee87ff25505d60da083cbb352f"/>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=575a38ee87ff25505d60da083cbb352f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait_for_completion</field>
+        <id>126ea2808740b9505d60da083cbb353d</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-10 20:58:33</sys_created_on>
+        <sys_id>1e6ea2808740b9505d60da083cbb3567</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-10 20:58:33</sys_updated_on>
+        <table>var__m_sys_hub_sub_flow_instance_inputs_126ea2808740b9505d60da083cbb353d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_126ea2808740b9505d60da083cbb353d^id=126ea2808740b9505d60da083cbb353d"/>
+    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=126ea2808740b9505d60da083cbb353d^sys_idNOT INda6ea2808740b9505d60da083cbb353d"/>
+    <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,fd_hide_inline_script_widget=true,uiType=boolean,uiTypeLabel=True/False</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>wait_for_completion</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Wait For Completion</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="">126ea2808740b9505d60da083cbb353d</model>
+        <model_id>126ea2808740b9505d60da083cbb353d</model_id>
+        <model_table>sys_hub_flow_logic_ext_input</model_table>
+        <name>var__m_sys_hub_sub_flow_instance_inputs_126ea2808740b9505d60da083cbb353d</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_sub_flow_instance_inputs</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-10 20:58:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>da6ea2808740b9505d60da083cbb353d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-10 20:58:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_sub_flow_instance_inputs>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=126ea2808740b9505d60da083cbb353d"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=e1a930ae87ff25505d60da083cbb35e5"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=e1a930ae87ff25505d60da083cbb35e5"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=e1a930ae87ff25505d60da083cbb35e5"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_e1a930ae87ff25505d60da083cbb35e5^sys_idNOT IN1b5a38ee87ff25505d60da083cbb3522,575a38ee87ff25505d60da083cbb351f,5f5a38ee87ff25505d60da083cbb351b"/>
@@ -730,14 +717,14 @@
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"89b195fa877f65505d60da083cbb358c","name":"plan","plan_signature":null}}</plan>
         <plan_id>e1a930ae87ff25505d60da083cbb35e5</plan_id>
-        <snapshot>01b9268b87bfa5505d60da083cbb35f0</snapshot>
+        <snapshot>18b155fa877f65505d60da083cbb35dd</snapshot>
         <sys_class_name>sys_flow_trigger_plan</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-07-06 17:01:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>89b195fa877f65505d60da083cbb358c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -746,8 +733,8 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
-        <trigger display_value="">0d173dcf87fba5505d60da083cbb35d4</trigger>
+        <sys_updated_on>2023-07-10 20:58:36</sys_updated_on>
+        <trigger display_value="">d76ee2808740b9505d60da083cbb3587</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=e1a930ae87ff25505d60da083cbb35e5"/>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
@@ -761,12 +748,12 @@
         <copied_from_name/>
         <description>Send event to EDA when a problem is approved</description>
         <internal_name>problem_approved</internal_name>
-        <label_cache>[{"name":"d22cff56-0320-417b-b3f8-f1ab091e311f.variable","label":"3 - Get Problem➛Problem Event","reference_display":"Problem Event","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"02e57404-dff5-4a01-a5ff-460c03366dbb"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Problem Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"problem","column_name":"sys_id"},{"name":"277f5c1e-86b4-46c6-8100-5d18c6379234.variable","label":"1 - EDA Validation➛Need Event","reference_display":"Need Event","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6a73ca1a-66f6-4029-9fc3-7ac1aadd6ee0"}}]</label_cache>
+        <label_cache>[{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Problem Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"problem","column_name":"sys_id"},{"name":"d22cff56-0320-417b-b3f8-f1ab091e311f.variable","label":"3 - Get Problem➛Problem Event","reference_display":"Problem Event","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"02e57404-dff5-4a01-a5ff-460c03366dbb"}},{"name":"Updated_1.table_name","label":"Trigger - Record Updated➛Problem Table","reference":"problem","reference_display":"Problem","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}}]</label_cache>
         <master>true</master>
-        <name>Problem Changed</name>
+        <name>Problem Updated</name>
         <natlang/>
         <outputs/>
-        <parent_flow display_value="Problem Changed">e1a930ae87ff25505d60da083cbb35e5</parent_flow>
+        <parent_flow display_value="Problem Updated">e1a930ae87ff25505d60da083cbb35e5</parent_flow>
         <remote_trigger_id/>
         <run_as>system</run_as>
         <run_with_roles/>
@@ -778,7 +765,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>18b155fa877f65505d60da083cbb35dd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -787,7 +774,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:50</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:36</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=18b155fa877f65505d60da083cbb35dd"/>
@@ -795,7 +782,7 @@
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
-        <flow display_value="Problem Changed">18b155fa877f65505d60da083cbb35dd</flow>
+        <flow display_value="Problem Updated">18b155fa877f65505d60da083cbb35dd</flow>
         <name>Updated</name>
         <remote_sys_id/>
         <sys_class_name>sys_hub_trigger_instance</sys_class_name>
@@ -803,7 +790,7 @@
         <sys_created_on>2023-07-06 17:01:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>60b195fa877f65505d60da083cbb352e</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -811,7 +798,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:52</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:36</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -923,7 +910,7 @@
         <label>Record</label>
         <mandatory>true</mandatory>
         <max_length>200</max_length>
-        <model display_value="Problem Changed">18b155fa877f65505d60da083cbb35dd</model>
+        <model display_value="Problem Updated">18b155fa877f65505d60da083cbb35dd</model>
         <model_id>18b155fa877f65505d60da083cbb35dd</model_id>
         <model_table>sys_hub_flow_snapshot</model_table>
         <name>var__m_sys_hub_flow_input_18b155fa877f65505d60da083cbb35dd</name>
@@ -947,7 +934,7 @@
         <sys_created_on>2023-07-06 17:01:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>10b155fa877f65505d60da083cbb35df</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -955,7 +942,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:50</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1008,7 +995,7 @@
         <label>Changed Fields</label>
         <mandatory>false</mandatory>
         <max_length>4000</max_length>
-        <model display_value="Problem Changed">18b155fa877f65505d60da083cbb35dd</model>
+        <model display_value="Problem Updated">18b155fa877f65505d60da083cbb35dd</model>
         <model_id>18b155fa877f65505d60da083cbb35dd</model_id>
         <model_table>sys_hub_flow_snapshot</model_table>
         <name>var__m_sys_hub_flow_input_18b155fa877f65505d60da083cbb35dd</name>
@@ -1093,7 +1080,7 @@
         <label>Table Name</label>
         <mandatory>false</mandatory>
         <max_length>200</max_length>
-        <model display_value="Problem Changed">18b155fa877f65505d60da083cbb35dd</model>
+        <model display_value="Problem Updated">18b155fa877f65505d60da083cbb35dd</model>
         <model_id>18b155fa877f65505d60da083cbb35dd</model_id>
         <model_table>sys_hub_flow_snapshot</model_table>
         <name>var__m_sys_hub_flow_input_18b155fa877f65505d60da083cbb35dd</name>
@@ -1117,7 +1104,7 @@
         <sys_created_on>2023-07-06 17:01:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e4b155fa877f65505d60da083cbb35ff</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1125,7 +1112,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:50</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1140,64 +1127,24 @@
     </sys_hub_flow_input>
     <sys_hub_flow_output action="delete_multiple" query="model=18b155fa877f65505d60da083cbb35dd"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=18b155fa877f65505d60da083cbb35dd"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=18b155fa877f65505d60da083cbb35dd^sys_idNOT IN60b195fa877f65505d60da083cbb352d,64b195fa877f65505d60da083cbb3518,6cb195fa877f65505d60da083cbb3524"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="EDA Webhook">2e421c148733ad105d60da083cbb3578</action_type>
-        <action_type_parent display_value="EDA Webhook">5aae48dc87ff6d105d60da083cbb3531</action_type_parent>
+    <sys_hub_action_instance action="delete_multiple" query="flow=18b155fa877f65505d60da083cbb35dd"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=18b155fa877f65505d60da083cbb35dd^sys_idNOT IN876ee2808740b9505d60da083cbb3527"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
-        <flow display_value="Problem Changed">18b155fa877f65505d60da083cbb35dd</flow>
-        <order>4</order>
-        <parent_ui_id>17a5745d-a554-404a-9bf0-8208a3ffaedd</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:04</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>60b195fa877f65505d60da083cbb352d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:50</sys_updated_on>
-        <ui_id>ade33570-3167-4b80-b9ac-c9894ae82022</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=60b195fa877f65505d60da083cbb352d"/>
-    <sys_element_mapping action="delete_multiple" query="id=60b195fa877f65505d60da083cbb352d"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>Event_Data</field>
-        <id>60b195fa877f65505d60da083cbb352d</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:04</sys_created_on>
-        <sys_id>acb195fa877f65505d60da083cbb352d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 17:01:04</sys_updated_on>
-        <table>var__m_sys_hub_action_input_2e421c148733ad105d60da083cbb3578</table>
-        <value>{{d22cff56-0320-417b-b3f8-f1ab091e311f.variable}}</value>
-    </sys_element_mapping>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=60b195fa877f65505d60da083cbb352d"/>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=60b195fa877f65505d60da083cbb352d"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_type display_value="EDA Validation">1a05e1e88733ed105d60da083cbb3581</action_type>
-        <action_type_parent display_value="EDA Validation">91352864877fad105d60da083cbb357b</action_type_parent>
-        <comment/>
-        <display_text/>
-        <flow display_value="Problem Changed">18b155fa877f65505d60da083cbb35dd</flow>
+        <flow display_value="Problem Updated">18b155fa877f65505d60da083cbb35dd</flow>
+        <inputs/>
+        <inputs/>
         <order>1</order>
         <parent_ui_id/>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <subflow display_value="Send EDA Event">3324aec48700b9505d60da083cbb3574</subflow>
+        <subflow_instance_inputs/>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:04</sys_created_on>
+        <sys_created_on>2023-07-10 20:58:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>64b195fa877f65505d60da083cbb3518</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_id>876ee2808740b9505d60da083cbb3527</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1205,95 +1152,154 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:50</sys_updated_on>
-        <ui_id>277f5c1e-86b4-46c6-8100-5d18c6379234</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=64b195fa877f65505d60da083cbb3518"/>
+        <sys_updated_on>2023-07-10 20:58:36</sys_updated_on>
+        <ui_id>d6a2adc5-796c-408d-8ad5-d8ae1f79289a</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=876ee2808740b9505d60da083cbb3527"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>64b195fa877f65505d60da083cbb3518</document_key>
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>876ee2808740b9505d60da083cbb3527</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:04</sys_created_on>
-        <sys_id>a4b195fa877f65505d60da083cbb3519</sys_id>
+        <sys_created_on>2023-07-10 20:58:35</sys_created_on>
+        <sys_id>036ee2808740b9505d60da083cbb3535</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 17:01:04</sys_updated_on>
-        <value>problem</value>
-        <variable display_value="Record Type">9a05e1e88733ed105d60da083cbb3584</variable>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
+        <value>check_problem_state</value>
+        <variable display_value="Trigger Type">3b24aec48700b9505d60da083cbb3576</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581^id=64b195fa877f65505d60da083cbb3518"/>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=64b195fa877f65505d60da083cbb3518"/>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=64b195fa877f65505d60da083cbb3518"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Get Problem">e618a712873f25505d60da083cbb3539</action_type>
-        <action_type_parent display_value="Get Problem">7b73671e87fb25505d60da083cbb3586</action_type_parent>
-        <comment/>
-        <display_text/>
-        <flow display_value="Problem Changed">18b155fa877f65505d60da083cbb35dd</flow>
-        <order>3</order>
-        <parent_ui_id>17a5745d-a554-404a-9bf0-8208a3ffaedd</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>876ee2808740b9505d60da083cbb3527</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:04</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>6cb195fa877f65505d60da083cbb3524</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:50</sys_updated_on>
-        <ui_id>d22cff56-0320-417b-b3f8-f1ab091e311f</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=6cb195fa877f65505d60da083cbb3524"/>
-    <sys_element_mapping action="delete_multiple" query="id=6cb195fa877f65505d60da083cbb3524"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>problem_id</field>
-        <id>6cb195fa877f65505d60da083cbb3524</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:04</sys_created_on>
-        <sys_id>a8b195fa877f65505d60da083cbb3525</sys_id>
+        <sys_created_on>2023-07-10 20:58:35</sys_created_on>
+        <sys_id>cb6ee2808740b9505d60da083cbb3535</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 17:01:04</sys_updated_on>
-        <table>var__m_sys_hub_action_input_e618a712873f25505d60da083cbb3539</table>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait For Completion">436ee2808740b9505d60da083cbb3528</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=876ee2808740b9505d60da083cbb3527"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_id</field>
+        <id>876ee2808740b9505d60da083cbb3527</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-10 20:58:35</sys_created_on>
+        <sys_id>0b6ee2808740b9505d60da083cbb3534</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3324aec48700b9505d60da083cbb3574</table>
         <value>{{Updated_1.current.sys_id}}</value>
     </sys_element_mapping>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=6cb195fa877f65505d60da083cbb3524"/>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6cb195fa877f65505d60da083cbb3524"/>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=18b155fa877f65505d60da083cbb35dd"/>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=18b155fa877f65505d60da083cbb35dd^sys_idNOT INe8b195fa877f65505d60da083cbb350a"/>
-    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">9f5a38ee87ff25505d60da083cbb352e</block>
-        <comment/>
-        <connected_to/>
-        <decision_table/>
-        <decision_table_inputs/>
-        <display_text/>
-        <extended_inputs/>
-        <flow display_value="Problem Changed">18b155fa877f65505d60da083cbb35dd</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
-        <inputs/>
-        <inputs/>
-        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>2</order>
-        <outputs_assigned/>
-        <outputs_to_assign/>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>876ee2808740b9505d60da083cbb3527</id>
         <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:03</sys_created_on>
+        <sys_created_on>2023-07-10 20:58:35</sys_created_on>
+        <sys_id>cb6ee2808740b9505d60da083cbb3534</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3324aec48700b9505d60da083cbb3574</table>
+        <value>{{Updated_1.table_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>trigger_type</field>
+        <id>876ee2808740b9505d60da083cbb3527</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-10 20:58:35</sys_created_on>
+        <sys_id>8f6ee2808740b9505d60da083cbb3534</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3324aec48700b9505d60da083cbb3574</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait_for_completion</field>
+        <id>876ee2808740b9505d60da083cbb3527</id>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-10 20:58:35</sys_created_on>
+        <sys_id>4b6ee2808740b9505d60da083cbb3535</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
+        <table>var__m_sys_hub_sub_flow_instance_inputs_876ee2808740b9505d60da083cbb3527</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_876ee2808740b9505d60da083cbb3527^id=876ee2808740b9505d60da083cbb3527"/>
+    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=876ee2808740b9505d60da083cbb3527^sys_idNOT IN436ee2808740b9505d60da083cbb3528"/>
+    <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,fd_hide_inline_script_widget=true,uiType=boolean,uiTypeLabel=True/False</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>wait_for_completion</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Wait For Completion</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="">876ee2808740b9505d60da083cbb3527</model>
+        <model_id>876ee2808740b9505d60da083cbb3527</model_id>
+        <model_table>sys_hub_flow_logic_ext_input</model_table>
+        <name>var__m_sys_hub_sub_flow_instance_inputs_876ee2808740b9505d60da083cbb3527</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_sub_flow_instance_inputs</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-10 20:58:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>e8b195fa877f65505d60da083cbb350a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>436ee2808740b9505d60da083cbb3528</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1301,53 +1307,21 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-07 14:22:50</sys_updated_on>
-        <ui_id>17a5745d-a554-404a-9bf0-8208a3ffaedd</ui_id>
-        <workflow_inputs/>
-        <workflow_reference/>
-    </sys_hub_flow_logic>
-    <sys_variable_value action="delete_multiple" query="document_key=e8b195fa877f65505d60da083cbb350a"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_flow_logic</document>
-        <document_key>e8b195fa877f65505d60da083cbb350a</document_key>
-        <order>10</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:03</sys_created_on>
-        <sys_id>64b195fa877f65505d60da083cbb350e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 17:01:03</sys_updated_on>
-        <value>Qualify to send webhook event</value>
-        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=e8b195fa877f65505d60da083cbb350a"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>condition</field>
-        <id>e8b195fa877f65505d60da083cbb350a</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:03</sys_created_on>
-        <sys_id>e0b195fa877f65505d60da083cbb350e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 17:01:03</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value>{{277f5c1e-86b4-46c6-8100-5d18c6379234.variable}}=true</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>condition_name</field>
-        <id>e8b195fa877f65505d60da083cbb350a</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-07-06 17:01:03</sys_created_on>
-        <sys_id>20b195fa877f65505d60da083cbb350e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 17:01:03</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e8b195fa877f65505d60da083cbb350a"/>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=e8b195fa877f65505d60da083cbb350a"/>
+        <sys_updated_on>2023-07-10 20:58:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_sub_flow_instance_inputs>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=876ee2808740b9505d60da083cbb3527"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=18b155fa877f65505d60da083cbb35dd"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=18b155fa877f65505d60da083cbb35dd"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=18b155fa877f65505d60da083cbb35dd"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_18b155fa877f65505d60da083cbb35dd^sys_idNOT INa0b155fa877f65505d60da083cbb35fc,acb195fa877f65505d60da083cbb3503,e0b155fa877f65505d60da083cbb35f4"/>

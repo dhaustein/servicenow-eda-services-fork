@@ -19,14 +19,14 @@
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <state>draft</state>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-28 17:43:22</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>5aae48dc87ff6d105d60da083cbb3531</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>EDA Webhook</sys_name>
         <sys_overrides/>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_5aae48dc87ff6d105d60da083cbb3531</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 13:45:36</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:14:25</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -89,7 +89,7 @@
         <sys_created_on>2023-06-28 17:51:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f57094d08733ad105d60da083cbb35c3</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -97,7 +97,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 13:45:36</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:14:23</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f57094d08733ad105d60da083cbb35c3"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -122,9 +122,9 @@
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-28 17:51:15</sys_created_on>
         <sys_id>f97094d08733ad105d60da083cbb35d3</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 13:45:36</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:14:23</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   function viaMidServer(mid, url, token, event_body){
     /*
@@ -159,7 +159,7 @@
       return;
     }
     
-    
+    /*
     var response_sysid;
     var response = new GlideRecord("ecc_queue");
     for (i = 0; true; i++){
@@ -172,6 +172,7 @@
         break;
       }
     }
+    */
     
   }
   
@@ -486,7 +487,7 @@
         <sys_created_on>2023-06-28 17:59:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>16421c148733ad105d60da083cbb3548</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -494,7 +495,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 13:45:36</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:14:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -693,16 +694,16 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="EDA Webhook">5aae48dc87ff6d105d60da083cbb3531</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"f6421c148733ad105d60da083cbb35e4","name":"plan","plan_signature":null}}</plan>
-        <snapshot>aa79f4f6873f65505d60da083cbb35bb</snapshot>
+        <snapshot>774462088700b9505d60da083cbb35ef</snapshot>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-28 17:59:15</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>f6421c148733ad105d60da083cbb35e4</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 15:15:16</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:14:26</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>package_private</access>
@@ -791,7 +792,7 @@
         <sys_created_on>2023-06-28 17:59:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ea421c148733ad105d60da083cbb3581</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -799,7 +800,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 15:15:14</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:14:24</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ea421c148733ad105d60da083cbb3581"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -810,9 +811,9 @@
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-28 17:59:13</sys_created_on>
         <sys_id>62421c148733ad105d60da083cbb3599</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 15:15:14</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:14:24</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   function viaMidServer(mid, url, token, event_body){
     /*
@@ -841,22 +842,27 @@
     request.payload = '&lt;parameters&gt;&lt;parameter name="script" value="var webhook = new EdaWebhookForward(); res = webhook.send();"/&gt;' + urlParam + tokenParam + jsonParam + '&lt;/parameters&gt;';
     request.queue = "output";
     request.topic = "JavascriptProbe";
-	var requst_id = request.insert();
+	var request_id = request.insert();
+    if (!request_id) {
+      gs.error("REQUEST_ID is null");
+      return;
+    }
     
     /*
     var response_sysid;
     var response = new GlideRecord("ecc_queue");
-    for (i = 0; i &lt; 60; i++){
-      gs.sleep(1000);
+    for (i = 0; true; i++){
+      //gs.sleep(1000);
       response.addQuery("response_to", request_id);
       response.addQuery("queue", "input");
       response.query();
       if (response.next()) {
-        gs.info("REPONSE from Mid Server: " + response.payload);
+        gs.info("FINISH after " + i + "attempts. REPONSE from Mid Server: " + response.payload);
         break;
       }
     }
     */
+    
   }
   
   function directSend(url, token, event_body){
@@ -1273,7 +1279,7 @@
         <sys_created_on>2023-06-28 17:59:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>aa421c148733ad105d60da083cbb35a0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1281,7 +1287,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-06 15:15:15</sys_updated_on>
+        <sys_updated_on>2023-07-10 20:14:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
