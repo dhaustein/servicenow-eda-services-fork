@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[var delay = 1000; //1 second
-var retry = 5;
+        <client_script><![CDATA[var delay = 500; //500 milliseconds
 var status;
 
 function insert_record(url, token, mid_server) {
@@ -38,11 +37,13 @@ function check_record(request_id) {
         var output = document.getElementById("output");
         status = xmlDoc.getElementsByTagName("output")[0].textContent;
         if (status == "200")
-            alert("Webhook configuration test status: succeeded!");
-        //output.innerHTML = "<label>Webhook configuration status: " + status + "</label>";
-    } else
-        alert("Webhook configuration test status: failed! Try again!");
-    //output.innerHTML = "<label style='color:red'>Webhook configuration status: " + status + "</label>";
+            output.innerHTML = "<label>Webhook configuration status: " + status + "</label>";
+        else
+            output.innerHTML = "<label style='color:red'>Webhook configuration status: " + status + "</label>";
+        return true;
+    }
+    return false;
+
 }
 
 function direct_send(url, token) {
@@ -57,26 +58,30 @@ function direct_send(url, token) {
 
 function getResponse(response) {
     if (response == 200)
-        alert("Webhook configuration test status: succeeded!");
+		output.innerHTML = "<label>Webhook configuration status: " + response + "</label>";
     else
-        alert("Webhook configuration test status: failed! Try again!");
+        output.innerHTML = "<label style='color:red'>Webhook configuration status: " + response + "</label>";
+}
+
+function recursive_check_record(id) {
+    timeout = setTimeout(function() {
+        if (check_record(id))
+            return;
+        else
+			recursive_check_record(id);
+    }, delay);
 }
 
 function webhook_test() {
+	var output = document.getElementById("output");
+	output.innerHTML = "";
+
     var url = document.getElementById("webhook_url").value;
     var token = document.getElementById("webhook_token").value;
     var mid_server = document.getElementById("mid_server").value;
     if (mid_server) {
         id = insert_record(url, token, mid_server);
-
-        timeout = setTimeout(function() {
-            for (i = 0; i < retry; i++) {
-                check_record(id);
-                if (status == "200")
-                    break;
-            }
-            clearTimeout(timeout);
-        }, delay);
+        recursive_check_record(id);
     } else {
         direct_send(url, token);
     }
@@ -209,6 +214,12 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 						<td><label>Mid Server configured to forward event to EDA controller on premise:</label></td>
 						<td><input type="text" name="mid_server" id="mid_server" size="50" value="${jvar_mid_server}"/></td>
 					</tr>
+					<tr>
+						<td colspan="2"><p/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><div style="text-align: center;" id="output"/></td>
+					</tr>
 				</table>
 			</td>
 			<td  style="padding: 15px;">
@@ -259,7 +270,7 @@ gs.setProperty("x_1070098_my_eda_0.mid_server", mid_server);]]></processing_scri
         <sys_created_on>2023-06-23 15:39:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b032022a9767611049b0b9dfe153affe</sys_id>
-        <sys_mod_count>242</sys_mod_count>
+        <sys_mod_count>264</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
@@ -267,6 +278,6 @@ gs.setProperty("x_1070098_my_eda_0.mid_server", mid_server);]]></processing_scri
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_b032022a9767611049b0b9dfe153affe</sys_update_name>
         <sys_updated_by>hui_song</sys_updated_by>
-        <sys_updated_on>2023-07-12 13:39:18</sys_updated_on>
+        <sys_updated_on>2023-07-12 20:08:26</sys_updated_on>
     </sys_ui_page>
 </record_update>
