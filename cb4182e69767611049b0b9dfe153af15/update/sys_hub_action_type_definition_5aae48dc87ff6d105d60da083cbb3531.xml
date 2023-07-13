@@ -19,14 +19,14 @@
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <state>published</state>
+        <state>draft</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-28 17:43:22</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>5aae48dc87ff6d105d60da083cbb3531</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>EDA Webhook</sys_name>
         <sys_overrides/>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_5aae48dc87ff6d105d60da083cbb3531</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 20:14:25</sys_updated_on>
+        <sys_updated_on>2023-07-13 17:52:05</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -89,7 +89,7 @@
         <sys_created_on>2023-06-28 17:51:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f57094d08733ad105d60da083cbb35c3</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -97,7 +97,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 20:14:23</sys_updated_on>
+        <sys_updated_on>2023-07-13 17:52:05</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f57094d08733ad105d60da083cbb35c3"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -122,85 +122,22 @@
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-28 17:51:15</sys_created_on>
         <sys_id>f97094d08733ad105d60da083cbb35d3</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 20:14:23</sys_updated_on>
+        <sys_updated_on>2023-07-13 17:52:05</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-  function viaMidServer(mid, url, token, event_body){
-    /*
-    var jspr = new JavascriptProbe(mid);
-    jspr.setName('SendEdaWebhook'); //Any descriptive name will do
-    jspr.setJavascript('var webhook = new EdaWebhookForward(); res = webhook.send();');
-    jspr.addParameter('url', url);
-    jspr.addParameter('token', token);
-    jspr.addParameter("json_data", event_body);
-    jspr.create();
-    */
-    if(event_body.startsWith('"')) {
-      event_body = event_body.substring(1, event_body.length-1);
-    }
-    event_body = event_body.replaceAll('\\"', '&amp;quot;');
-
-
-    var urlParam = '&lt;parameter name="url" value="' + url + '" /&gt;';
-    var tokenParam = '&lt;parameter name="token" value="' + token + '" /&gt;';
-    var jsonParam = '&lt;parameter name="json_data" value="' + event_body + '" /&gt;';
-
-    var request = new GlideRecord("ecc_queue");
-    request.initialize();
-    request.name = "EDA Webhook";
-    request.agent = "mid.server." + mid;
-    request.payload = '&lt;parameters&gt;&lt;parameter name="script" value="var webhook = new EdaWebhookForward(); res = webhook.send();"/&gt;' + urlParam + tokenParam + jsonParam + '&lt;/parameters&gt;';
-    request.queue = "output";
-    request.topic = "JavascriptProbe";
-	var request_id = request.insert();
-    if (!request_id) {
-      gs.error("REQUEST_ID is null");
-      return;
-    }
-    
-    /*
-    var response_sysid;
-    var response = new GlideRecord("ecc_queue");
-    for (i = 0; true; i++){
-      //gs.sleep(1000);
-      response.addQuery("response_to", request_id);
-      response.addQuery("queue", "input");
-      response.query();
-      if (response.next()) {
-        gs.info("FINISH after " + i + "attempts. REPONSE from Mid Server: " + response.payload);
-        break;
-      }
-    }
-    */
-    
-  }
-  
-  function directSend(url, token, event_body){
-    var req = new sn_ws.RESTMessageV2();
-    req.setEndpoint(url);
-    req.setHttpMethod("post");
-    req.setRequestHeader("Authorization", "Bearer " + token);
-    req.setRequestBody(body);
-    var response = req.execute();
-    var httpStatus = response.getStatusCode();
-    gs.info("Webhook HTTP status response: " + httpStatus);
-  }
-
-  // main script
-  var body = JSON.stringify(inputs.body);
   
   var url = gs.getProperty('x_1070098_my_eda_0.webhook_url');
   var token = gs.getProperty('x_1070098_my_eda_0.webhook_token');
   var mid_server = gs.getProperty('x_1070098_my_eda_0.mid_server');
   
   if (mid_server) {
-    gs.info("Sending event " + body + " to EDA through mid server");
-    viaMidServer(mid_server, url, token, body);
+    var mid = EdaEventMidServer();
+    mid.send(mid_server, url, token, inputs.body);
   }
   else {
-    gs.info("Sending event " + body + " to EDA through direct webhook");
-    directSend(url, token, body);
+    var http = EdaEventDirect();
+    http.send(url, token, inputs.body);
   }
 })(inputs, outputs);
 </value>
@@ -487,7 +424,7 @@
         <sys_created_on>2023-06-28 17:59:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>16421c148733ad105d60da083cbb3548</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -495,7 +432,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 20:14:23</sys_updated_on>
+        <sys_updated_on>2023-07-13 17:52:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

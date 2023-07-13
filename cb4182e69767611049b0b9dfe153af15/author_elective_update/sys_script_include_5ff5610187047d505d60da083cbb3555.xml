@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1070098_my_eda_0.EdaEventDirectAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Client callable version of EdaEventDirectAjax</description>
+        <name>EdaEventDirectAjax</name>
+        <script><![CDATA[var EdaEventDirectAjax = Class.create();
+EdaEventDirectAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    send: function() {
+		var http = new EdaEventDirect();
+		return http.send(this.getParameter('url'), this.getParameter('token'), this.getParameter('body'));
+	},
+
+    type: 'EdaEventDirectAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-13 18:17:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5ff5610187047d505d60da083cbb3555</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>EdaEventDirectAjax</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_script_include_5ff5610187047d505d60da083cbb3555</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:26:51</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</application>
+        <file_path/>
+        <instance_id>9f069d8b4fbbd204facf220f0310c75e</instance_id>
+        <instance_name>ansible</instance_name>
+        <name>sys_script_include_5ff5610187047d505d60da083cbb3555</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1070098_my_eda_0.EdaEventDirectAjax&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Client callable version of EdaEventDirectAjax&lt;/description&gt;&lt;name&gt;EdaEventDirectAjax&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var EdaEventDirectAjax = Class.create();
+EdaEventDirectAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    send: function() {
+		var http = new EdaEventDirect();
+		return http.send(this.getParameter('url'), this.getParameter('token'), this.getParameter('body'));
+	},
+
+    type: 'EdaEventDirectAjax'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bill_wei&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-13 18:17:58&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;5ff5610187047d505d60da083cbb3555&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;EdaEventDirectAjax&lt;/sys_name&gt;&lt;sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Event-Driven Ansible Notification Service"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_5ff5610187047d505d60da083cbb3555&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bill_wei&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-13 18:26:51&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-553506841</payload_hash>
+        <record_name>EdaEventDirectAjax</record_name>
+        <reverted_from/>
+        <source>9260a5cc870c79505d60da083cbb35d0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-13 18:26:51</sys_created_on>
+        <sys_id>a178ad4187047d505d60da083cbb35ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>189508181270000001</sys_recorded_at>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:26:51</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>e578ad41b0047d50cacd67289bd5f0ee</update_guid>
+        <update_guid_history>e578ad41b0047d50cacd67289bd5f0ee:-553506841,3737a941fd047d50aa65d2f80ca2620f:1749728016,27662d0121047d5049b707d591c92267:-299194187</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-13 18:31:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>1207f1b0025845af8223207a01e3e189</sys_id>
+        <sys_metadata>5ff5610187047d505d60da083cbb3555</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EdaEventDirectAjax</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
+        <sys_update_name>sys_script_include_5ff5610187047d505d60da083cbb3555</sys_update_name>
+        <sys_update_version display_value="sys_script_include_5ff5610187047d505d60da083cbb3555">a178ad4187047d505d60da083cbb35ef</sys_update_version>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:31:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

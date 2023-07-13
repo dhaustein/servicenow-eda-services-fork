@@ -32,14 +32,16 @@ EdaWebhookForward.prototype = {
 			try {
 				os = http.getOutputStream();
 				os.write(body);
+				return http.getResponseCode();
 			} finally {
-				os.close();
+				if (os) {
+					os.close();
+				}
 			}
         }
         catch(e){
             return "Error: " + e.message;
         } 
-        return "200";
     },
    
     type: "EdaWebhookForward"
@@ -50,7 +52,7 @@ EdaWebhookForward.prototype = {
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>134982b887bfed105d60da083cbb35ce</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>EdaWebhookForward</sys_name>
         <sys_overrides/>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
@@ -59,6 +61,6 @@ EdaWebhookForward.prototype = {
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>ecc_agent_script_include_134982b887bfed105d60da083cbb35ce</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-11 20:35:39</sys_updated_on>
+        <sys_updated_on>2023-07-12 20:36:18</sys_updated_on>
     </ecc_agent_script_include>
 </record_update>
