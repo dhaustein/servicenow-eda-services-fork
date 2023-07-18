@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>Whether notify EDA when a problem is created</description>
+        <description>Whether notify EDA when a catalog request's state changes</description>
         <ignore_cache>true</ignore_cache>
         <is_private>false</is_private>
-        <name>x_1070098_my_eda_0.check_problem_created</name>
+        <name>x_1070098_my_eda_0.check_request_state</name>
         <read_roles/>
-        <suffix>check_problem_created</suffix>
+        <suffix>check_request_state</suffix>
         <sys_class_name>sys_properties</sys_class_name>
-        <sys_created_by>hui_song</sys_created_by>
-        <sys_created_on>2023-06-27 16:05:20</sys_created_on>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-14 19:06:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>807e22f71bab2550b76a0d0fdc4bcb2b</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>x_1070098_my_eda_0.check_problem_created</sys_name>
+        <sys_id>cbda329587c4bd505d60da083cbb3543</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_1070098_my_eda_0.check_request_state</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name>sys_properties_807e22f71bab2550b76a0d0fdc4bcb2b</sys_update_name>
+        <sys_update_name>sys_properties_cbda329587c4bd505d60da083cbb3543</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-14 19:14:42</sys_updated_on>
+        <sys_updated_on>2023-07-18 16:45:48</sys_updated_on>
         <type>boolean</type>
-        <value>true</value>
+        <value>false</value>
         <write_roles/>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=807e22f71bab2550b76a0d0fdc4bcb2b"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=cbda329587c4bd505d60da083cbb3543"/>
 </record_update>

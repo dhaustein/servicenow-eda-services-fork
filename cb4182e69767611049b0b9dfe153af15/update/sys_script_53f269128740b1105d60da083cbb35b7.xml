@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>ecc_queue</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="ecc_queue">name=EDA Webhook^queue=input^topic=JavascriptProbe^EQ<item endquery="false" field="name" goto="false" newquery="false" operator="=" or="false" value="EDA Webhook"/>
+            <item display_value="input" endquery="false" field="queue" goto="false" newquery="false" operator="=" or="false" value="input"/>
+            <item endquery="false" field="topic" goto="false" newquery="false" operator="=" or="false" value="JavascriptProbe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Log finishing EDA webhook</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var parser = new XMLDocument2();
+	parser.parseXML(current.payload);
+    var status = parser.getNodeText("/results/result/output");
+	if (status) {
+		if (status == "200") {
+			gs.info("EDA event (tracking_id={0}) sent via mid server with HTTP status: {1}", current.response_to, status);
+		}
+		else {
+			gs.error("Failed to send EDA event (tracking_id={0}) via mid server. HTTP status: {1}", current.response_to, status);
+		}
+	}
+	else {
+		gs.error("Failed to send EDA event (tracking_id={0}) via mid server. Error: {1}", current.response_to, parser.getNode("/results/result"));
+	}
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-17 15:18:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>53f269128740b1105d60da083cbb35b7</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Log finishing EDA webhook</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_script_53f269128740b1105d60da083cbb35b7</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-17 18:55:18</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=53f269128740b1105d60da083cbb35b7"/>
+</record_update>

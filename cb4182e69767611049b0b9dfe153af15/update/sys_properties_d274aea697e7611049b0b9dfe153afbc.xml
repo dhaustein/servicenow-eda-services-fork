@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>monitor problem when its state is changed</description>
+        <description>Whether notify EDA when a problem's state changes</description>
         <ignore_cache>true</ignore_cache>
         <is_private>false</is_private>
         <name>x_1070098_my_eda_0.check_problem_state</name>
@@ -12,15 +12,15 @@
         <sys_created_on>2023-06-23 18:09:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d274aea697e7611049b0b9dfe153afbc</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>x_1070098_my_eda_0.check_problem_state</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_properties_d274aea697e7611049b0b9dfe153afbc</sys_update_name>
-        <sys_updated_by>hui_song</sys_updated_by>
-        <sys_updated_on>2023-07-11 14:29:46</sys_updated_on>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-14 19:11:17</sys_updated_on>
         <type>boolean</type>
         <value>false</value>
         <write_roles/>

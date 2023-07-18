@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="DELETE">
+        <category display_value="EDA Controller">4a31fdf4877fed105d60da083cbb35ee</category>
+        <order>300</order>
+        <property display_value="x_1070098_my_eda_0.mid_server" name="x_1070098_my_eda_0.mid_server">5f30f1f4877fed105d60da083cbb3579</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-30 14:37:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ee57753c877fed105d60da083cbb3589</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1070098_my_eda_0.mid_server.EDA Controller</sys_name>
+        <sys_package display_value="My EDA" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="My EDA">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_ee57753c877fed105d60da083cbb3589</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-30 14:44:22</sys_updated_on>
+    </sys_properties_category_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</application>
+        <file_path/>
+        <instance_id>9f069d8b4fbbd204facf220f0310c75e</instance_id>
+        <instance_name>ansible</instance_name>
+        <name>sys_properties_category_m2m_ee57753c877fed105d60da083cbb3589</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="EDA Controller">4a31fdf4877fed105d60da083cbb35ee</category><order>300</order><property display_value="x_1070098_my_eda_0.mid_server" name="x_1070098_my_eda_0.mid_server">5f30f1f4877fed105d60da083cbb3579</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>bill_wei</sys_created_by><sys_created_on>2023-06-30 14:37:44</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>ee57753c877fed105d60da083cbb3589</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_1070098_my_eda_0.mid_server.EDA Controller</sys_name><sys_package display_value="My EDA" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="My EDA">cb4182e69767611049b0b9dfe153af15</sys_scope><sys_update_name>sys_properties_category_m2m_ee57753c877fed105d60da083cbb3589</sys_update_name><sys_updated_by>bill_wei</sys_updated_by><sys_updated_on>2023-06-30 14:44:22</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+        <payload_hash>-588087697</payload_hash>
+        <record_name>x_1070098_my_eda_0.mid_server.EDA Controller</record_name>
+        <reverted_from/>
+        <source>195c6ff387a36d105d60da083cbb356c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-06-30 14:44:22</sys_created_on>
+        <sys_id>33d8797c877fed105d60da083cbb35db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1890cc323200000001</sys_recorded_at>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-06-30 14:44:22</sys_updated_on>
+        <type>Category Property</type>
+        <update_guid>77d8797c047fed101c68e07eac6068da</update_guid>
+        <update_guid_history>77d8797c047fed101c68e07eac6068da:-588087697,2257753ce77fed1058d10f112a99828c:880744941</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-14 18:59:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_properties_category_m2m">sys_properties_category_m2m</sys_db_object>
+        <sys_id>22860f2ceb3540daa36adb9e5868d4c4</sys_id>
+        <sys_metadata>ee57753c877fed105d60da083cbb3589</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1070098_my_eda_0.mid_server.EDA Controller</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
+        <sys_update_name>sys_properties_category_m2m_ee57753c877fed105d60da083cbb3589</sys_update_name>
+        <sys_update_version display_value="sys_properties_category_m2m_ee57753c877fed105d60da083cbb3589">33d8797c877fed105d60da083cbb35db</sys_update_version>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-14 18:59:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
