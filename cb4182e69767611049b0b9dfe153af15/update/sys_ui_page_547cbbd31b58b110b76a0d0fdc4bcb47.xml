@@ -271,18 +271,18 @@ gs.setProperty("x_1070098_my_eda_0.webhook_token", webhook_token);
 
 gs.setProperty("x_1070098_my_eda_0.mid_server", mid_server);]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-06-23 15:39:25</sys_created_on>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-08-02 15:16:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>b032022a9767611049b0b9dfe153affe</sys_id>
-        <sys_mod_count>287</sys_mod_count>
+        <sys_id>547cbbd31b58b110b76a0d0fdc4bcb47</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name>sys_ui_page_b032022a9767611049b0b9dfe153affe</sys_update_name>
+        <sys_update_name>sys_ui_page_547cbbd31b58b110b76a0d0fdc4bcb47</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-19 19:51:29</sys_updated_on>
+        <sys_updated_on>2023-08-02 15:19:17</sys_updated_on>
     </sys_ui_page>
 </record_update>
