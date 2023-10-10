@@ -2,7 +2,7 @@
     <sys_script_include action="DELETE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_1070098_my_eda_0.EdaWebhookForward</api_name>
+        <api_name>x_rhtpp_eda.EdaWebhookForward</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Send an event to EDA Webhook</description>
@@ -55,7 +55,7 @@ EdaWebhookForward.prototype = {
         <sys_id>bf57b7988740f9505d60da083cbb355a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>EdaWebhookForward</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
@@ -70,7 +70,7 @@ EdaWebhookForward.prototype = {
         <instance_id>9f069d8b4fbbd204facf220f0310c75e</instance_id>
         <instance_name>ansible</instance_name>
         <name>sys_script_include_bf57b7988740f9505d60da083cbb355a</name>
-        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1070098_my_eda_0.EdaWebhookForward&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Send an event to EDA Webhook&lt;/description&gt;&lt;name&gt;EdaWebhookForward&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var EdaWebhookForward = Class.create();
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_rhtpp_eda.EdaWebhookForward&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Send an event to EDA Webhook&lt;/description&gt;&lt;name&gt;EdaWebhookForward&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var EdaWebhookForward = Class.create();
 
 EdaWebhookForward.prototype = {
    
@@ -110,7 +110,7 @@ EdaWebhookForward.prototype = {
     },
    
     type: "EdaWebhookForward"
-};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bill_wei&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-11 20:57:22&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;bf57b7988740f9505d60da083cbb355a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;EdaWebhookForward&lt;/sys_name&gt;&lt;sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Event-Driven Ansible Notification Service"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_bf57b7988740f9505d60da083cbb355a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bill_wei&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-11 20:57:22&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bill_wei&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-11 20:57:22&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;bf57b7988740f9505d60da083cbb355a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;EdaWebhookForward&lt;/sys_name&gt;&lt;sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Event-Driven Ansible Notification Service"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_bf57b7988740f9505d60da083cbb355a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bill_wei&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-11 20:57:22&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
         <payload_hash>-320854905</payload_hash>
         <record_name>EdaWebhookForward</record_name>
         <reverted_from/>
@@ -139,7 +139,7 @@ EdaWebhookForward.prototype = {
         <sys_metadata>bf57b7988740f9505d60da083cbb355a</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>EdaWebhookForward</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_parent/>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
