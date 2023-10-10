@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_1070098_my_eda_0.EdaEventDirect</api_name>
+        <api_name>x_rhtpp_eda.EdaEventDirect</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Send an event to EDA directly</description>
@@ -43,7 +43,7 @@ EdaEventDirect.prototype = {
         <sys_id>1271c50d87407d505d60da083cbb352d</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>EdaEventDirect</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>

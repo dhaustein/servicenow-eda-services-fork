@@ -2,7 +2,7 @@
     <sys_script_include action="DELETE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_1070098_my_eda_0.EdaEventDirectAjax</api_name>
+        <api_name>x_rhtpp_eda.EdaEventDirectAjax</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
         <description>Client callable version of EdaEventDirectAjax</description>
@@ -23,7 +23,7 @@ EdaEventDirectAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_id>5ff5610187047d505d60da083cbb3555</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>EdaEventDirectAjax</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
@@ -38,7 +38,7 @@ EdaEventDirectAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <instance_id>9f069d8b4fbbd204facf220f0310c75e</instance_id>
         <instance_name>ansible</instance_name>
         <name>sys_script_include_5ff5610187047d505d60da083cbb3555</name>
-        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1070098_my_eda_0.EdaEventDirectAjax&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Client callable version of EdaEventDirectAjax&lt;/description&gt;&lt;name&gt;EdaEventDirectAjax&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var EdaEventDirectAjax = Class.create();
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_rhtpp_eda.EdaEventDirectAjax&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Client callable version of EdaEventDirectAjax&lt;/description&gt;&lt;name&gt;EdaEventDirectAjax&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var EdaEventDirectAjax = Class.create();
 EdaEventDirectAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     send: function() {
 		var http = new EdaEventDirect();
@@ -46,7 +46,7 @@ EdaEventDirectAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 	},
 
     type: 'EdaEventDirectAjax'
-});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bill_wei&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-13 18:17:58&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;5ff5610187047d505d60da083cbb3555&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;EdaEventDirectAjax&lt;/sys_name&gt;&lt;sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Event-Driven Ansible Notification Service"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_5ff5610187047d505d60da083cbb3555&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bill_wei&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-13 18:26:51&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bill_wei&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-13 18:17:58&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;5ff5610187047d505d60da083cbb3555&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;EdaEventDirectAjax&lt;/sys_name&gt;&lt;sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Event-Driven Ansible Notification Service"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_5ff5610187047d505d60da083cbb3555&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bill_wei&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-13 18:26:51&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
         <payload_hash>-553506841</payload_hash>
         <record_name>EdaEventDirectAjax</record_name>
         <reverted_from/>
@@ -75,7 +75,7 @@ EdaEventDirectAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_metadata>5ff5610187047d505d60da083cbb3555</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>EdaEventDirectAjax</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_parent/>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
