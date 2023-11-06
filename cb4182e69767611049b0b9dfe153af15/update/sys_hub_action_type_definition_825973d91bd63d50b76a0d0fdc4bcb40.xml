@@ -19,14 +19,14 @@
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <state>draft</state>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-11-03 19:59:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>825973d91bd63d50b76a0d0fdc4bcb40</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Sync Property</sys_name>
         <sys_overrides/>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_825973d91bd63d50b76a0d0fdc4bcb40</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-06 14:49:43</sys_updated_on>
+        <sys_updated_on>2023-11-06 16:20:05</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -89,7 +89,7 @@
         <sys_created_on>2023-11-03 20:07:26</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f42bbf1d1bd63d50b76a0d0fdc4bcb44</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -97,7 +97,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-06 14:49:43</sys_updated_on>
+        <sys_updated_on>2023-11-06 16:20:03</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f42bbf1d1bd63d50b76a0d0fdc4bcb44"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -108,9 +108,9 @@
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-11-03 20:07:27</sys_created_on>
         <sys_id>342bbf1d1bd63d50b76a0d0fdc4bcb63</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-06 14:49:43</sys_updated_on>
+        <sys_updated_on>2023-11-06 16:20:03</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     var properties = ["x_rhtpp_eda.check_incident_created",&#13;
                  "x_rhtpp_eda.check_incident_state",&#13;
@@ -123,7 +123,10 @@
                  "x_rhtpp_eda.webhook_token",&#13;
                  "x_rhtpp_eda.webhook_url"];&#13;
     if (properties.indexOf(inputs.property_name) &gt; -1) {&#13;
-        gs.setProperty(inputs.property_name, inputs.property_value || "");&#13;
+		if (inputs.property_value == null || inputs.property_value == "null") {&#13;
+			inputs.property_value = "";&#13;
+		}&#13;
+        gs.setProperty(inputs.property_name, inputs.property_value);&#13;
     }&#13;
 })(inputs, outputs);&#13;
 </value>
@@ -607,7 +610,7 @@
         <sys_created_on>2023-11-03 20:07:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>662bff1d1bd63d50b76a0d0fdc4bcb03</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -615,7 +618,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-06 14:49:43</sys_updated_on>
+        <sys_updated_on>2023-11-06 16:20:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -839,16 +842,16 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Sync Property">825973d91bd63d50b76a0d0fdc4bcb40</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"032bff1d1bd63d50b76a0d0fdc4bcb97","name":"plan","plan_signature":null}}</plan>
-        <snapshot>f22bff1d1bd63d50b76a0d0fdc4bcb57</snapshot>
+        <snapshot>f3d36a5e871639505d60da083cbb35e3</snapshot>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-11-03 20:07:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>032bff1d1bd63d50b76a0d0fdc4bcb97</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-03 20:07:36</sys_updated_on>
+        <sys_updated_on>2023-11-06 16:20:06</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -896,10 +899,10 @@
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-11-03 20:07:34</sys_created_on>
         <sys_id>b22bff1d1bd63d50b76a0d0fdc4bcb55</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-03 20:07:34</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <sys_updated_on>2023-11-06 15:01:01</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">362bff1d1bd63d50b76a0d0fdc4bcb49</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -937,7 +940,7 @@
         <sys_created_on>2023-11-03 20:07:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e62bff1d1bd63d50b76a0d0fdc4bcb37</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -945,7 +948,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-03 20:07:34</sys_updated_on>
+        <sys_updated_on>2023-11-06 16:20:05</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e62bff1d1bd63d50b76a0d0fdc4bcb37"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -956,9 +959,9 @@
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-11-03 20:07:34</sys_created_on>
         <sys_id>7e2bff1d1bd63d50b76a0d0fdc4bcb45</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-03 20:07:34</sys_updated_on>
+        <sys_updated_on>2023-11-06 16:20:05</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     var properties = ["x_rhtpp_eda.check_incident_created",&#13;
                  "x_rhtpp_eda.check_incident_state",&#13;
@@ -971,6 +974,9 @@
                  "x_rhtpp_eda.webhook_token",&#13;
                  "x_rhtpp_eda.webhook_url"];&#13;
     if (properties.indexOf(inputs.property_name) &gt; -1) {&#13;
+		if (inputs.property_value == null || inputs.property_value == "null") {&#13;
+			inputs.property_value = "";&#13;
+		}&#13;
         gs.setProperty(inputs.property_name, inputs.property_value);&#13;
     }&#13;
 })(inputs, outputs);&#13;
@@ -1544,7 +1550,7 @@
         <sys_created_on>2023-11-03 20:07:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ba2bff1d1bd63d50b76a0d0fdc4bcb4d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1552,7 +1558,7 @@
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-03 20:07:34</sys_updated_on>
+        <sys_updated_on>2023-11-06 16:20:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
