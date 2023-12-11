@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_rhtpp_eda.EdaEventMidServerAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Client sends a dummy event via mid server to test EDA webhook connectivity.</description>
+        <name>EdaEventMidServerAjax</name>
+        <script><![CDATA[var EdaEventMidServerAjax = Class.create();
+EdaEventMidServerAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    send: function() {
+		var mid = new EdaEventMidServer();
+		return mid.send(this.getParameter('mid_server'), this.getParameter('url'), this.getParameter('token'), '{"ServiceNow":"ping"}', 'ping', 'test');
+	},
+    type: 'EdaEventMidServerAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-07-13 18:25:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b047e90187047d505d60da083cbb3573</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>EdaEventMidServerAjax</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_script_include_b047e90187047d505d60da083cbb3573</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-07-14 16:09:21</sys_updated_on>
+    </sys_script_include>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</application>
+        <file_path/>
+        <instance_id>8b2116b2dbeaf590caf99027c5961949</instance_id>
+        <instance_name>dev218592</instance_name>
+        <name>sys_script_include_b047e90187047d505d60da083cbb3573</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;
+    &lt;sys_script_include action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;package_private&lt;/access&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;api_name&gt;x_rhtpp_eda.EdaEventMidServerAjax&lt;/api_name&gt;
+        &lt;caller_access/&gt;
+        &lt;client_callable&gt;true&lt;/client_callable&gt;
+        &lt;description&gt;Client sends a dummy event via mid server to test EDA webhook connectivity.&lt;/description&gt;
+        &lt;name&gt;EdaEventMidServerAjax&lt;/name&gt;
+        &lt;script&gt;&lt;![CDATA[var EdaEventMidServerAjax = Class.create();
+EdaEventMidServerAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    send: function() {
+		var mid = new EdaEventMidServer();
+		return mid.send(this.getParameter('mid_server'), this.getParameter('url'), this.getParameter('token'), '{"ServiceNow":"ping"}', 'ping', 'test');
+	},
+    type: 'EdaEventMidServerAjax'
+});]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;bill_wei&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-07-13 18:25:12&lt;/sys_created_on&gt;
+        &lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;
+        &lt;sys_id&gt;b047e90187047d505d60da083cbb3573&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;EdaEventMidServerAjax&lt;/sys_name&gt;
+        &lt;sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_package&gt;
+        &lt;sys_policy&gt;read&lt;/sys_policy&gt;
+        &lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;
+        &lt;sys_scope display_value="Event-Driven Ansible Notification Service"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_include_b047e90187047d505d60da083cbb3573&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;bill_wei&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-07-14 16:09:21&lt;/sys_updated_on&gt;
+    &lt;/sys_script_include&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>69984357</payload_hash>
+        <record_name>EdaEventMidServerAjax</record_name>
+        <reverted_from/>
+        <source>2130de8847433110f96fa3c9316d437f</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-06 21:55:27</sys_created_on>
+        <sys_id>24501ec847433110f96fa3c9316d430a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c4120f1070000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-06 21:55:27</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>e0501ec83643311082bc0e7a7edb790a</update_guid>
+        <update_guid_history>e0501ec83643311082bc0e7a7edb790a:69984357</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-11 18:31:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0b03900684814cf082d0f8e3996c7440</sys_id>
+        <sys_metadata>b047e90187047d505d60da083cbb3573</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EdaEventMidServerAjax</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
+        <sys_update_name>sys_script_include_b047e90187047d505d60da083cbb3573</sys_update_name>
+        <sys_update_version display_value="sys_script_include_b047e90187047d505d60da083cbb3573">24501ec847433110f96fa3c9316d430a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-11 18:31:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

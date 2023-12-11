@@ -1,49 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[var delay = 500; //500 milliseconds
-var ecc_id;
-
-
-function check_record() {
-    var response_sysid;
-    var response = new GlideRecord("ecc_queue");
-    response.addQuery("response_to", ecc_id);
-    response.addQuery("queue", "input");
-    response.query();
-    if (response.next()) {
-        var parser = new DOMParser();
-        var xmlDoc = parser.parseFromString(response.payload, "text/xml");
-        var output = document.getElementById("output");
-        var status = xmlDoc.getElementsByTagName("output")[0].textContent;
-        if (status == "200")
-            output.innerHTML = "<label style='color:green'>Webhook Connection OK</label>";
-        else
-            output.innerHTML = "<label style='color:red'>Webhook Connection Failed. HTTP Status Code: " + status + "</label>";
-		document.body.style.cursor = "default";
-        return true;
-    }
-    return false;
-}
-
-function mid_server_send(mid_server, url, token) {
-	var ga = new GlideAjax("x_rhtpp_eda.EdaEventMidServerAjax");
-    ga.addParam('sysparm_name', 'send');
-	ga.addParam('mid_server', mid_server);
-    ga.addParam('url', url);
-    ga.addParam('token', token);
-    ga.getXMLAnswer(getEccQueueId);
-}
-
-function getEccQueueId(response) {
-	ecc_id = response;
-}
-
-function direct_send(url, token) {
+        <client_script><![CDATA[function direct_send(url, token, mid_server) {
     var ga = new GlideAjax("x_rhtpp_eda.EdaEventDirectAjax");
     ga.addParam('sysparm_name', 'send');
     ga.addParam('url', url);
     ga.addParam('token', token);
+	ga.addParam('mid_server', mid_server);
     ga.getXMLAnswer(getDirectResponse);
 }
 
@@ -55,19 +18,6 @@ function getDirectResponse(response) {
 	document.body.style.cursor = "default";
 }
 
-function wait_for_mid_server(count) {
-	if (count >= 120 * 1000 / delay) {
-		output.innerHTML = "<label style='color:red'>Timed out. No response from the mid server.</label>";
-		document.body.style.cursor = "default";
-		return;
-	}
-    timeout = setTimeout(function() {
-        if (check_record())
-            return;
-        else
-			wait_for_mid_server(count + 1);
-    }, delay);
-}
 
 function webhook_test() {
 	var output = document.getElementById("output");
@@ -85,12 +35,7 @@ function webhook_test() {
 	}
     var mid_server = document.getElementById("mid_server").value;
 	document.body.style.cursor = "wait";
-    if (mid_server) {
-        mid_server_send(mid_server, url, token);
-        wait_for_mid_server(0);
-    } else {
-        direct_send(url, token);
-    }
+    direct_send(url, token, mid_server);
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -270,16 +215,14 @@ sp.setProperties(properties);
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-08-02 15:16:44</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>547cbbd31b58b110b76a0d0fdc4bcb47</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_547cbbd31b58b110b76a0d0fdc4bcb47</sys_update_name>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-11-03 20:36:05</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-11 18:37:00</sys_updated_on>
     </sys_ui_page>
 </record_update>
