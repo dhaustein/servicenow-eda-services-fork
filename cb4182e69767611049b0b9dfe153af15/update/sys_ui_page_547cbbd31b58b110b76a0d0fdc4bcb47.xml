@@ -29,10 +29,6 @@ function webhook_test() {
 		return;
 	}
     var token = document.getElementById("webhook_token").value;
-	if (!token) {
-		alert("Token is required");
-		return;
-	}
     var mid_server = document.getElementById("mid_server").value;
 	document.body.style.cursor = "wait";
     direct_send(url, token, mid_server);
@@ -121,10 +117,10 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			<label style="font-size: 1.2em;">Incident</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_incident_created" value="${jvar_check_incident_created}"/>When Created</label>
+			<label><g:ui_checkbox name="check_incident_created" value="${JS,HTML:jvar_check_incident_created}"/>When Created</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_incident_state" value="${jvar_check_incident_state}"/>When State Changed</label>
+			<label><g:ui_checkbox name="check_incident_state" value="${JS,HTML:jvar_check_incident_state}"/>When State Changed</label>
 		</td>
 	</tr>
 	<tr>
@@ -132,10 +128,10 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			<label style="font-size: 1.2em;">Problem</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_problem_created" value="${jvar_check_problem_created}"/>When Created</label>
+			<label><g:ui_checkbox name="check_problem_created" value="${JS,HTML:jvar_check_problem_created}"/>When Created</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_problem_state" value="${jvar_check_problem_state}"/>When State Changed</label>
+			<label><g:ui_checkbox name="check_problem_state" value="${JS,HTML:jvar_check_problem_state}"/>When State Changed</label>
 		</td>
 	</tr>
 	<tr>
@@ -143,13 +139,13 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			<label style="font-size: 1.2em;">Catalog Request</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_request_created" value="${jvar_check_request_created}"/>When Created</label>
+			<label><g:ui_checkbox name="check_request_created" value="${JS,HTML:jvar_check_request_created}"/>When Created</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_request_state" value="${jvar_check_request_state}"/>When Request State Changed</label>
+			<label><g:ui_checkbox name="check_request_state" value="${JS,HTML:jvar_check_request_state}"/>When Request State Changed</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_request_approved" value="${jvar_check_request_approved}"/>When Approved</label>
+			<label><g:ui_checkbox name="check_request_approved" value="${JS,HTML:jvar_check_request_approved}"/>When Approved</label>
 		</td>
 	</tr>
 </table>
@@ -161,15 +157,15 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			<td style="padding: 15px;">
 					<tr>
 						<td><label>Webhook URL starting with https or http *</label></td>
-						<td><input type="text" name="webhook_url" id="webhook_url" size="50" value="${jvar_webhook_url}"/></td>
+						<td><input type="text" name="webhook_url" id="webhook_url" size="50" value="${JS,HTML:jvar_webhook_url}"/></td>
 					</tr>
 					<tr>
-						<td><label>Webhook authorization token *</label></td>
-						<td><input type="password" name="webhook_token" id="webhook_token" size="50" value="${jvar_webhook_token}"/></td>
+						<td><label>Webhook authorization token</label></td>
+						<td><input type="password" name="webhook_token" id="webhook_token" size="50" value="${JS,HTML:jvar_webhook_token}"/></td>
 					</tr>
 					<tr>
-						<td><label>Mid Server configured to forward event to EDA controller on premise:</label></td>
-						<td><input type="text" name="mid_server" id="mid_server" size="50" value="${jvar_mid_server}"/></td>
+						<td><label>Mid Server configured to forward events to EDA controller on premise:</label></td>
+						<td><input type="text" name="mid_server" id="mid_server" size="50" value="${JS,HTML:jvar_mid_server}"/></td>
 					</tr>
 					<tr>
 						<td colspan="2"><p/></td>
@@ -216,13 +212,13 @@ sp.setProperties(properties);
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-08-02 15:16:44</sys_created_on>
         <sys_id>547cbbd31b58b110b76a0d0fdc4bcb47</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_547cbbd31b58b110b76a0d0fdc4bcb47</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-12-11 18:37:00</sys_updated_on>
+        <sys_updated_on>2023-12-20 16:01:37</sys_updated_on>
     </sys_ui_page>
 </record_update>
