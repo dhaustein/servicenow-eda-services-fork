@@ -80,10 +80,11 @@
         <update_guid_history>b0501ec8df433110e1b5702cdba88a73:1497393264</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_rhtpp_eda.user">cd0ce45847d73150f96fa3c9316d430c</sys_audit_delete>
+        <sys_audit_delete display_value="">cd0ce45847d73150f96fa3c9316d430c</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-19 19:31:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
         <sys_id>75493da4017b449ca88e32b3626eb744</sys_id>
         <sys_metadata>534182e69767611049b0b9dfe153af21</sys_metadata>
@@ -92,6 +93,7 @@
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_parent/>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
         <sys_update_name>sys_user_role_534182e69767611049b0b9dfe153af21</sys_update_name>

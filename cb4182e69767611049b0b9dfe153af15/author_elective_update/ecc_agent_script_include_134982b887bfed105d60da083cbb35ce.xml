@@ -154,10 +154,11 @@ EdaWebhookForward.prototype = {
         <update_guid_history>963012c85e43311095890734644c939a:-1612880955</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="EdaWebhookForward">912f1b69478f3510f96fa3c9316d4333</sys_audit_delete>
+        <sys_audit_delete display_value="">912f1b69478f3510f96fa3c9316d4333</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-11 19:30:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="ecc_agent_script_include">ecc_agent_script_include</sys_db_object>
         <sys_id>36db882fd5be42a29ee1a9f1be36af04</sys_id>
         <sys_metadata>134982b887bfed105d60da083cbb35ce</sys_metadata>
@@ -166,6 +167,7 @@ EdaWebhookForward.prototype = {
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_parent/>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
         <sys_update_name>ecc_agent_script_include_134982b887bfed105d60da083cbb35ce</sys_update_name>

@@ -16,6 +16,5 @@
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-07-13 18:25:13</sys_updated_on>
         <sys_user_role display_value="x_rhtpp_eda.admin" name="x_rhtpp_eda.admin">1b4182e69767611049b0b9dfe153af1c</sys_user_role>
-        <transaction_id/>
     </sys_security_acl_role>
 </record_update>
