@@ -17,7 +17,7 @@
                     <td><h2>Contact Us:</h2></td>
                 </tr>
                 <tr>
-                    <td><h3><a rel="noopener noreferrer nofollow" href=" https://www.servicenow.com/support/contact-support.html" target="_blank">https://www.servicenow.com/support/contact-support.html</a></h3></td>
+                    <td><h3><a rel="noopener noreferrer nofollow" href=" https://access.redhat.com/support" target="_blank">https://access.redhat.com/support</a></h3></td>
                 </tr>
             </table>
         </div>
@@ -29,13 +29,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-19 21:01:52</sys_created_on>
         <sys_id>a78eb05c471b3150f96fa3c9316d43e4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>eda_support</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_a78eb05c471b3150f96fa3c9316d43e4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-12-19 21:01:52</sys_updated_on>
+        <sys_updated_on>2024-01-19 14:21:05</sys_updated_on>
     </sys_ui_page>
 </record_update>
