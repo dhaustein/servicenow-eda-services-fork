@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="DELETE">
+        <active>true</active>
+        <base_uri>/api/x_rhtpp_eda/set_property</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>false</is_versioned>
+        <name>Set Property </name>
+        <namespace>x_rhtpp_eda</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>set_property</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-24 19:05:48</sys_created_on>
+        <sys_id>463ff5b747b77110f96fa3c9316d43a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Property </sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_ws_definition_463ff5b747b77110f96fa3c9316d43a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-24 19:05:48</sys_updated_on>
+    </sys_ws_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</application>
+        <file_path/>
+        <instance_id>8b2116b2dbeaf590caf99027c5961949</instance_id>
+        <instance_name>dev218592</instance_name>
+        <name>sys_ws_definition_463ff5b747b77110f96fa3c9316d43a9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/x_rhtpp_eda/set_property</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>Set Property </name><namespace>x_rhtpp_eda</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>set_property</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-01-24 19:05:48</sys_created_on><sys_id>463ff5b747b77110f96fa3c9316d43a9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Set Property </sys_name><sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package><sys_policy/><sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope><sys_update_name>sys_ws_definition_463ff5b747b77110f96fa3c9316d43a9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-01-24 19:05:48</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+        <payload_hash>-1822158662</payload_hash>
+        <record_name>Set Property </record_name>
+        <reverted_from/>
+        <source>3f80928847433110f96fa3c9316d436b</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-24 19:05:48</sys_created_on>
+        <sys_id>156ff9b747b77110f96fa3c9316d430e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d3cdd3c4b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-24 19:05:48</sys_updated_on>
+        <type>Scripted REST API</type>
+        <update_guid>196ff9b717b7711058c4bf6fe1bd5d0d</update_guid>
+        <update_guid_history>196ff9b717b7711058c4bf6fe1bd5d0d:-1822158662</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 18:42:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_definition">sys_ws_definition</sys_db_object>
+        <sys_id>5764a28076cc42d7a655b6fcf5986cd9</sys_id>
+        <sys_metadata>463ff5b747b77110f96fa3c9316d43a9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Property </sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
+        <sys_update_name>sys_ws_definition_463ff5b747b77110f96fa3c9316d43a9</sys_update_name>
+        <sys_update_version display_value="sys_ws_definition_463ff5b747b77110f96fa3c9316d43a9">156ff9b747b77110f96fa3c9316d430e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 18:42:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

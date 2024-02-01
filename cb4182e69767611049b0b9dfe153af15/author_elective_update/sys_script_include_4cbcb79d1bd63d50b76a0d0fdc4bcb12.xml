@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_rhtpp_eda.EdaSetProperty</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>EdaSetProperty</name>
+        <script><![CDATA[var EdaSetProperty = Class.create();
+EdaSetProperty.prototype = {
+    initialize: function() {
+    },
+
+	setProperty: function(name, value){
+		var request = new GlideRecord("x_rhtpp_eda_settings");
+		request.initialize();
+		request.property_name = name;
+		request.property_value = value;
+		request.insert();
+	},
+	
+	delay: function(ms) {
+		var endTime = new GlideDuration().getNumericValue() + ms;
+		while ( new GlideDuration().getNumericValue() < endTime) {
+			// do nothing
+		}
+	},
+	
+	setProperties: function(pairs) {
+		gs.setProperty("x_rhtpp_eda.check_incident_created", true);
+	},
+	
+	setProperties2: function(pairs) {
+		for(var i = 0; i < pairs.length; i++) {
+			this.setProperty(pairs[i][0], pairs[i][1]);
+		}
+		for (var t = 0; t < 100; t++) {
+			var synced = true;
+			this.delay(100);
+			for(i = 0; i < pairs.length; i++) {
+				if(gs.getProperty(pairs[i][0]) != pairs[i][1]) {
+					synced = false;
+					break;
+				}
+			}
+			if(synced) {
+				break;
+			}
+		}
+	},
+
+    type: 'EdaSetProperty'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-11-03 20:16:59</sys_created_on>
+        <sys_id>4cbcb79d1bd63d50b76a0d0fdc4bcb12</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>EdaSetProperty</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_script_include_4cbcb79d1bd63d50b76a0d0fdc4bcb12</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-25 16:49:25</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</application>
+        <file_path/>
+        <instance_id>8b2116b2dbeaf590caf99027c5961949</instance_id>
+        <instance_name>dev218592</instance_name>
+        <name>sys_script_include_4cbcb79d1bd63d50b76a0d0fdc4bcb12</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_rhtpp_eda.EdaSetProperty&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;EdaSetProperty&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var EdaSetProperty = Class.create();
+EdaSetProperty.prototype = {
+    initialize: function() {
+    },
+
+	setProperty: function(name, value){
+		var request = new GlideRecord("x_rhtpp_eda_settings");
+		request.initialize();
+		request.property_name = name;
+		request.property_value = value;
+		request.insert();
+	},
+	
+	delay: function(ms) {
+		var endTime = new GlideDuration().getNumericValue() + ms;
+		while ( new GlideDuration().getNumericValue() &lt; endTime) {
+			// do nothing
+		}
+	},
+	
+	setProperties: function(pairs) {
+		gs.setProperty("x_rhtpp_eda.check_incident_created", true);
+	},
+	
+	setProperties2: function(pairs) {
+		for(var i = 0; i &lt; pairs.length; i++) {
+			this.setProperty(pairs[i][0], pairs[i][1]);
+		}
+		for (var t = 0; t &lt; 100; t++) {
+			var synced = true;
+			this.delay(100);
+			for(i = 0; i &lt; pairs.length; i++) {
+				if(gs.getProperty(pairs[i][0]) != pairs[i][1]) {
+					synced = false;
+					break;
+				}
+			}
+			if(synced) {
+				break;
+			}
+		}
+	},
+
+    type: 'EdaSetProperty'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bill_wei&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-11-03 20:16:59&lt;/sys_created_on&gt;&lt;sys_id&gt;4cbcb79d1bd63d50b76a0d0fdc4bcb12&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;EdaSetProperty&lt;/sys_name&gt;&lt;sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Event-Driven Ansible Notification Service"&gt;cb4182e69767611049b0b9dfe153af15&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_4cbcb79d1bd63d50b76a0d0fdc4bcb12&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-01-25 16:49:25&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1711796888</payload_hash>
+        <record_name>EdaSetProperty</record_name>
+        <reverted_from/>
+        <source>3f80928847433110f96fa3c9316d436b</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-25 16:49:25</sys_created_on>
+        <sys_id>51c9624c47888210f96fa3c9316d43f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d4186ba450000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-25 16:49:25</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>19c9624c108882101438f755bee591ef</update_guid>
+        <update_guid_history>19c9624c108882101438f755bee591ef:1711796888,6c501ec898433110840f321c3209c003:-264355613</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 18:28:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>1faeda2b077842ed9e238bd3e0f76c11</sys_id>
+        <sys_metadata>4cbcb79d1bd63d50b76a0d0fdc4bcb12</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EdaSetProperty</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
+        <sys_update_name>sys_script_include_4cbcb79d1bd63d50b76a0d0fdc4bcb12</sys_update_name>
+        <sys_update_version display_value="sys_script_include_4cbcb79d1bd63d50b76a0d0fdc4bcb12">51c9624c47888210f96fa3c9316d43f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 18:28:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

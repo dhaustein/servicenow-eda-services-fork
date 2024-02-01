@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="a0c67b191bd63d50b76a0d0fdc4bcb5d" label="Settings" max_length="40" name="x_rhtpp_eda_settings" type="collection">
-        <element label="Property Name" max_length="40" name="property_name" type="string"/>
-        <element label="Property Value" max_length="200" name="property_value" type="string"/>
-    </element>
-</database>

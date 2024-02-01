@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_rhtpp_eda_settings</description>
+        <name>x_rhtpp_eda_settings</name>
+        <operation display_value="create">create</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-11-03 19:54:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ba28bf591bd63d50b76a0d0fdc4bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_rhtpp_eda_settings</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_security_acl_ba28bf591bd63d50b76a0d0fdc4bcb76</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-11-03 19:54:28</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</application>
+        <file_path/>
+        <instance_id>8b2116b2dbeaf590caf99027c5961949</instance_id>
+        <instance_name>dev218592</instance_name>
+        <name>sys_security_acl_ba28bf591bd63d50b76a0d0fdc4bcb76</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_rhtpp_eda_settings</description>
+        <name>x_rhtpp_eda_settings</name>
+        <operation display_value="create">create</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-11-03 19:54:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ba28bf591bd63d50b76a0d0fdc4bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_rhtpp_eda_settings</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_security_acl_ba28bf591bd63d50b76a0d0fdc4bcb76</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-11-03 19:54:28</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>]]></payload>
+        <payload_hash>-1595220556</payload_hash>
+        <record_name>x_rhtpp_eda_settings</record_name>
+        <reverted_from/>
+        <source>2130de8847433110f96fa3c9316d437f</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-06 21:55:27</sys_created_on>
+        <sys_id>64501ec847433110f96fa3c9316d4322</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c4120f2010000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-06 21:55:27</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>24501ec8844331103a585390d77e3c22</update_guid>
+        <update_guid_history>24501ec8844331103a585390d77e3c22:-1595220556</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 18:43:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>5da528e5a0d34ad7ad405151f962a459</sys_id>
+        <sys_metadata>ba28bf591bd63d50b76a0d0fdc4bcb76</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_rhtpp_eda_settings</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_parent display_value="">4630de8847433110f96fa3c9316d43ea</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
+        <sys_update_name>sys_security_acl_ba28bf591bd63d50b76a0d0fdc4bcb76</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_ba28bf591bd63d50b76a0d0fdc4bcb76">64501ec847433110f96fa3c9316d4322</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 18:43:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

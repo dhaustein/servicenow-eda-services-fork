@@ -12,13 +12,14 @@ EdaEventDirect.prototype = {
     initialize: function() {
     },
 	
-	send: function(url, token, mid, body, table, record_id, wait){
+	send: function(url, token, mid, body, table, record_id){
         var req = new sn_ws.RESTMessageV2();
         req.setEndpoint(url);
         req.setHttpMethod("post"); 
         req.setRequestBody(body);
 		if(mid != null && mid != "") {
-			req.setMIDServer(mid);		
+			req.setMIDServer(mid);	
+			req.setEccParameter("skip_sensor", "true");
 		}
 		if(token != null && token != "") {
 			if(mid != null && mid != "") {
@@ -30,21 +31,15 @@ EdaEventDirect.prototype = {
 
 		gs.info("Sending EDA event ({0} sys_id={1}).", table, record_id);
 		
-		if (wait) {
-			var response = req.execute();
-			var status = response.getStatusCode();
-			if(status == "200") {
-				gs.info("EDA event ({0} sys_id={1}) sent with HTTP status: {2}", table, record_id, status);
-			}
-			else {
-				gs.error("Failed to send EDA event ({0} sys_id={1}). HTTP status: {2}", table, record_id, status);
-			}
-			return status;
+		var response = req.execute();
+		var status = response.getStatusCode();
+		if(status == "200") {
+			gs.info("EDA event ({0} sys_id={1}) sent with HTTP status: {2}", table, record_id, status);
 		}
 		else {
-			req.executeAsync();
-			return;
+			gs.error("Failed to send EDA event ({0} sys_id={1}). HTTP status: {2}", table, record_id, status);
 		}
+		return status;
 	},
 
     type: 'EdaEventDirect'
@@ -53,16 +48,14 @@ EdaEventDirect.prototype = {
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-07-13 15:50:02</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>1271c50d87407d505d60da083cbb352d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>EdaEventDirect</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_script_include_1271c50d87407d505d60da083cbb352d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-12-20 15:45:46</sys_updated_on>
+        <sys_updated_on>2024-01-23 21:55:58</sys_updated_on>
     </sys_script_include>
 </record_update>

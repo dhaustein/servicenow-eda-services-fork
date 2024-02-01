@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <is_extendable>false</is_extendable>
+        <label>Settings</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_rhtpp_eda_settings</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-11-03 19:54:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a0c67b191bd63d50b76a0d0fdc4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Settings</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_db_object_a0c67b191bd63d50b76a0d0fdc4bcb5d</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-11-03 19:54:27</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_rhtpp_eda.admin" name="x_rhtpp_eda.admin">1b4182e69767611049b0b9dfe153af1c</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</application>
+        <file_path/>
+        <instance_id>8b2116b2dbeaf590caf99027c5961949</instance_id>
+        <instance_name>dev218592</instance_name>
+        <name>sys_db_object_a0c67b191bd63d50b76a0d0fdc4bcb5d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <is_extendable>false</is_extendable>
+        <label>Settings</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_rhtpp_eda_settings</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>bill_wei</sys_created_by>
+        <sys_created_on>2023-11-03 19:54:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a0c67b191bd63d50b76a0d0fdc4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Settings</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_update_name>sys_db_object_a0c67b191bd63d50b76a0d0fdc4bcb5d</sys_update_name>
+        <sys_updated_by>bill_wei</sys_updated_by>
+        <sys_updated_on>2023-11-03 19:54:27</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_rhtpp_eda.admin" name="x_rhtpp_eda.admin">1b4182e69767611049b0b9dfe153af1c</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>]]></payload>
+        <payload_hash>-2113243368</payload_hash>
+        <record_name>Settings</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-06 21:55:00</sys_created_on>
+        <sys_id>c63012c847433110f96fa3c9316d431b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c41208ab10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-06 21:55:00</sys_updated_on>
+        <type>Table</type>
+        <update_guid>863012c820433110b0b0f91b70009d1b</update_guid>
+        <update_guid_history>463012c8a2433110d59b1570a9f9af0b:149156183</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 18:43:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>18cb962964c145ff9de0fca82ba83131</sys_id>
+        <sys_metadata>a0c67b191bd63d50b76a0d0fdc4bcb5d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Settings</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
+        <sys_scope_delete display_value="">29cef78a97ba4219bda3713dc0a82ab9</sys_scope_delete>
+        <sys_update_name>sys_db_object_a0c67b191bd63d50b76a0d0fdc4bcb5d</sys_update_name>
+        <sys_update_version display_value="sys_db_object_a0c67b191bd63d50b76a0d0fdc4bcb5d">c63012c847433110f96fa3c9316d431b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 18:43:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

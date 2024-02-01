@@ -192,35 +192,31 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 </body>
 </j:jelly>]]></html>
         <name>eda_configuration</name>
-        <processing_script><![CDATA[var properties = [
-	["x_rhtpp_eda.check_incident_state", check_incident_state],
-	["x_rhtpp_eda.check_problem_state", check_problem_state],
-	["x_rhtpp_eda.check_request_state", check_request_state],
-	["x_rhtpp_eda.check_request_approved", check_request_approved],
-	["x_rhtpp_eda.check_request_created", check_request_created],
-	["x_rhtpp_eda.check_incident_created", check_incident_created],
-	["x_rhtpp_eda.check_problem_created", check_problem_created],
-	["x_rhtpp_eda.webhook_url", webhook_url || ''],
-	["x_rhtpp_eda.webhook_token", webhook_token || ''],
-	["x_rhtpp_eda.mid_server", mid_server || '']
-];
+        <processing_script><![CDATA[
+gs.setProperty("x_rhtpp_eda.check_incident_state", check_incident_state);
+gs.setProperty("x_rhtpp_eda.check_problem_state", check_problem_state);
+gs.setProperty("x_rhtpp_eda.check_request_state", check_request_state);
+gs.setProperty("x_rhtpp_eda.check_request_approved", check_request_approved);
+gs.setProperty("x_rhtpp_eda.check_request_created", check_request_created);
+gs.setProperty("x_rhtpp_eda.check_incident_created", check_incident_created);
+gs.setProperty("x_rhtpp_eda.check_problem_created", check_problem_created);
+gs.setProperty("x_rhtpp_eda.webhook_url", webhook_url || '');
+gs.setProperty("x_rhtpp_eda.webhook_token", webhook_token || '');
+gs.setProperty("x_rhtpp_eda.mid_server", mid_server || '');
 
-var sp = new x_rhtpp_eda.EdaSetProperty();
-sp.setProperties(properties);
+
 ]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-08-02 15:16:44</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>547cbbd31b58b110b76a0d0fdc4bcb47</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
         <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_547cbbd31b58b110b76a0d0fdc4bcb47</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-12-20 16:01:37</sys_updated_on>
+        <sys_updated_on>2024-02-01 18:27:36</sys_updated_on>
     </sys_ui_page>
 </record_update>
