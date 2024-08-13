@@ -6,11 +6,14 @@
         <action_template/>
         <active>true</active>
         <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description>Check whether the record triggers an EDA event</description>
+        <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>eda_validation</internal_name>
         <label_cache>[{"name":"{{action.record_type}}","label":"action➛Trigger Type","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"ad205ce4-c695-41e0-a233-3a249e0b2ad1"}},{"name":"{{action.is_new}}","label":"action➛Is New","type":"action","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.trigger_type}}","label":"action➛Trigger Type","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e361ddc-5480-4433-8d8e-fbd59ce20354].validation_result}}","label":"step➛Script step➛Validation Result","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
@@ -24,22 +27,22 @@
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 14:00:21</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>91352864877fad105d60da083cbb357b</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>EDA Validation</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_91352864877fad105d60da083cbb357b</sys_update_name>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-10 20:10:14</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-13 12:47:16</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=91352864877fad105d60da083cbb357b"/>
     <sys_variable_value action="delete_multiple" query="document_key=91352864877fad105d60da083cbb357b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_action_type_definition</document>
@@ -135,18 +138,11 @@
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
-        <sys_class_name>sys_hub_step_instance</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:12</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>8e05e1e88733ed105d60da083cbb3534</sys_id>
         <sys_mod_count>4</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-07-10 20:10:12</sys_updated_on>
     </sys_hub_step_instance>
@@ -163,7 +159,7 @@
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-07-10 20:10:12</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-  var key = 'x_1070098_my_eda_0.' + inputs.type;
+  var key = 'x_rhtpp_eda.' + inputs.type;
   outputs.validation_result = (gs.getProperty(key) == 'true');
 })(inputs, outputs);
 </value>
@@ -185,18 +181,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=8e05e1e88733ed105d60da083cbb3534"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>8e05e1e88733ed105d60da083cbb3534</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
-        <sys_id>4e05e1e88733ed105d60da083cbb3547</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>is_new</field>
         <id>8e05e1e88733ed105d60da083cbb3534</id>
         <sys_created_by>bill_wei</sys_created_by>
@@ -207,18 +191,6 @@
         <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_8e05e1e88733ed105d60da083cbb3534</table>
         <value>{{action.is_new}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>8e05e1e88733ed105d60da083cbb3534</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-06-29 18:39:12</sys_created_on>
-        <sys_id>0205e1e88733ed105d60da083cbb3548</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>type</field>
@@ -297,13 +269,11 @@
         <sys_class_name>sys_hub_step_ext_input</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:12</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>c205e1e88733ed105d60da083cbb353c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -383,13 +353,11 @@
         <sys_class_name>sys_hub_step_ext_output</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:12</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>8605e1e88733ed105d60da083cbb3541</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -419,15 +387,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:12</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>c205e1e88733ed105d60da083cbb3544</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Validation Result</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_8e05e1e88733ed105d60da083cbb3534_validation_result_en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-06-29 18:39:12</sys_updated_on>
         <url/>
@@ -496,13 +462,11 @@
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-07-10 20:10:11</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>ca5362c48700b9505d60da083cbb353f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -585,13 +549,11 @@
         <sys_class_name>sys_hub_action_output</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:12</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>4605e1e88733ed105d60da083cbb354c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -674,13 +636,11 @@
         <sys_class_name>sys_hub_action_output</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>8e05e1e88733ed105d60da083cbb3553</sys_id>
         <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -763,13 +723,11 @@
         <sys_class_name>sys_hub_action_output</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>c605e1e88733ed105d60da083cbb3550</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -812,15 +770,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-07-10 20:10:11</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>465362c48700b9505d60da083cbb3543</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Trigger Type</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_91352864877fad105d60da083cbb357b_trigger_type_en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-07-10 20:10:11</sys_updated_on>
         <url/>
@@ -839,15 +795,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>0e05e1e88733ed105d60da083cbb354f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Action Status</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b___action_status___en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
         <url/>
@@ -864,15 +818,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>c205e1e88733ed105d60da083cbb3553</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Need Event</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b_variable_en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
         <url/>
@@ -889,15 +841,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>c205e1e88733ed105d60da083cbb3558</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Don't Treat as Error</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_91352864877fad105d60da083cbb357b___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-06-29 18:39:13</sys_updated_on>
         <url/>
@@ -912,6 +862,7 @@
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:16</sys_created_on>
         <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>3a0525e88733ed105d60da083cbb3515</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_overrides/>
@@ -925,11 +876,14 @@
         <action_status/>
         <action_template/>
         <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description>Check whether the record triggers an EDA event</description>
+        <flow_priority/>
         <internal_name>eda_validation</internal_name>
         <label_cache>[{"name":"{{action.record_type}}","label":"action➛Trigger Type","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"ad205ce4-c695-41e0-a233-3a249e0b2ad1"}},{"name":"{{action.is_new}}","label":"action➛Is New","type":"action","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.trigger_type}}","label":"action➛Trigger Type","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e361ddc-5480-4433-8d8e-fbd59ce20354].validation_result}}","label":"step➛Script step➛Validation Result","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
         <master>true</master>
@@ -941,15 +895,14 @@
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>1a05e1e88733ed105d60da083cbb3581</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -957,6 +910,7 @@
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=1a05e1e88733ed105d60da083cbb3581"/>
     <sys_variable_value action="delete_multiple" query="document_key=1a05e1e88733ed105d60da083cbb3581"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_action_type_snapshot</document>
@@ -1052,18 +1006,11 @@
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
-        <sys_class_name>sys_hub_step_instance</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>9605e1e88733ed105d60da083cbb358d</sys_id>
         <sys_mod_count>4</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-07-10 20:10:14</sys_updated_on>
     </sys_hub_step_instance>
@@ -1080,7 +1027,7 @@
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-07-10 20:10:14</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-  var key = 'x_1070098_my_eda_0.' + inputs.type;
+  var key = 'x_rhtpp_eda.' + inputs.type;
   outputs.validation_result = (gs.getProperty(key) == 'true');
 })(inputs, outputs);
 </value>
@@ -1102,18 +1049,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=9605e1e88733ed105d60da083cbb358d"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>9605e1e88733ed105d60da083cbb358d</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_id>2205e1e88733ed105d60da083cbb359e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>is_new</field>
         <id>9605e1e88733ed105d60da083cbb358d</id>
         <sys_created_by>bill_wei</sys_created_by>
@@ -1124,18 +1059,6 @@
         <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_9605e1e88733ed105d60da083cbb358d</table>
         <value>{{action.is_new}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>9605e1e88733ed105d60da083cbb358d</id>
-        <sys_created_by>bill_wei</sys_created_by>
-        <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_id>e205e1e88733ed105d60da083cbb359e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>type</field>
@@ -1214,13 +1137,11 @@
         <sys_class_name>sys_hub_step_ext_input</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>2e05e1e88733ed105d60da083cbb3590</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -1300,13 +1221,11 @@
         <sys_class_name>sys_hub_step_ext_output</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>aa05e1e88733ed105d60da083cbb3597</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -1336,15 +1255,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>e605e1e88733ed105d60da083cbb359a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Validation Result</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_9605e1e88733ed105d60da083cbb358d_validation_result_en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
         <url/>
@@ -1413,13 +1330,11 @@
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-07-10 20:10:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>6a5362c48700b9505d60da083cbb35de</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -1502,13 +1417,11 @@
         <sys_class_name>sys_hub_action_output</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>6a05e1e88733ed105d60da083cbb35a2</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -1591,13 +1504,11 @@
         <sys_class_name>sys_hub_action_output</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>6a05e1e88733ed105d60da083cbb35a6</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -1680,13 +1591,11 @@
         <sys_class_name>sys_hub_action_output</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>ae05e1e88733ed105d60da083cbb35a9</sys_id>
         <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name/>
         <sys_updated_by>bill_wei</sys_updated_by>
@@ -1729,15 +1638,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-07-10 20:10:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>a25362c48700b9505d60da083cbb35e2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Trigger Type</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_1a05e1e88733ed105d60da083cbb3581_trigger_type_en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-07-10 20:10:13</sys_updated_on>
         <url/>
@@ -1756,15 +1663,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:15</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>6205e1e88733ed105d60da083cbb35ae</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Don't Treat as Error</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-06-29 18:39:15</sys_updated_on>
         <url/>
@@ -1781,15 +1686,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>ae05e1e88733ed105d60da083cbb35a5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Action Status</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581___action_status___en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
         <url/>
@@ -1806,15 +1709,13 @@
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-29 18:39:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>e205e1e88733ed105d60da083cbb35a9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_name>Need Event</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_1a05e1e88733ed105d60da083cbb3581_variable_en</sys_update_name>
         <sys_updated_by>bill_wei</sys_updated_by>
         <sys_updated_on>2023-06-29 18:39:14</sys_updated_on>
         <url/>
@@ -1824,6 +1725,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>91352864877fad105d60da083cbb357b</sys_id>
         <latest_snapshot>1a05e1e88733ed105d60da083cbb3581</latest_snapshot>
-        <compiler_build>glide-utah-12-21-2022__patch1-hotfix1b-05-01-2023_05-15-2023_1848.zip</compiler_build>
+        <compiler_build>glide-washingtondc-12-20-2023__patch1-hotfix2-03-27-2024_03-31-2024_1047.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

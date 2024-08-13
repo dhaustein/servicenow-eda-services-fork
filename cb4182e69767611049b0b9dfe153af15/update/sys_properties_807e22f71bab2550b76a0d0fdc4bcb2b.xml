@@ -4,26 +4,24 @@
         <description>Whether notify EDA when a problem is created</description>
         <ignore_cache>true</ignore_cache>
         <is_private>false</is_private>
-        <name>x_1070098_my_eda_0.check_problem_created</name>
-        <read_roles/>
+        <name>x_rhtpp_eda.check_problem_created</name>
+        <read_roles>x_rhtpp_eda.admin</read_roles>
         <suffix>check_problem_created</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>hui_song</sys_created_by>
         <sys_created_on>2023-06-27 16:05:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>807e22f71bab2550b76a0d0fdc4bcb2b</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>x_1070098_my_eda_0.check_problem_created</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>x_rhtpp_eda.check_problem_created</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_properties_807e22f71bab2550b76a0d0fdc4bcb2b</sys_update_name>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-08-02 15:50:00</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 18:31:29</sys_updated_on>
         <type>boolean</type>
         <value>false</value>
-        <write_roles/>
+        <write_roles>x_rhtpp_eda.admin</write_roles>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=807e22f71bab2550b76a0d0fdc4bcb2b"/>
 </record_update>
