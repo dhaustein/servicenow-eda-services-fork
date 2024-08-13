@@ -4,26 +4,24 @@
         <description>EDA Webhook authorization token</description>
         <ignore_cache>true</ignore_cache>
         <is_private>false</is_private>
-        <name>x_1070098_my_eda_0.webhook_token</name>
-        <read_roles/>
+        <name>x_rhtpp_eda.webhook_token</name>
+        <read_roles>x_rhtpp_eda.admin</read_roles>
         <suffix>webhook_token</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-06-30 14:06:04</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>c0ffa9b4877fed105d60da083cbb3503</sys_id>
-        <sys_mod_count>17</sys_mod_count>
-        <sys_name>x_1070098_my_eda_0.webhook_token</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>x_rhtpp_eda.webhook_token</sys_name>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_properties_c0ffa9b4877fed105d60da083cbb3503</sys_update_name>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-08-02 15:31:45</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 18:35:00</sys_updated_on>
         <type>password</type>
         <value/>
-        <write_roles/>
+        <write_roles>x_rhtpp_eda.admin</write_roles>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=c0ffa9b4877fed105d60da083cbb3503"/>
 </record_update>

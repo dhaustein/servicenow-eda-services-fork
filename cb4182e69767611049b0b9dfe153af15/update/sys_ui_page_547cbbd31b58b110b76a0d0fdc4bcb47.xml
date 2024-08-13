@@ -1,49 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[var delay = 500; //500 milliseconds
-var ecc_id;
-
-
-function check_record() {
-    var response_sysid;
-    var response = new GlideRecord("ecc_queue");
-    response.addQuery("response_to", ecc_id);
-    response.addQuery("queue", "input");
-    response.query();
-    if (response.next()) {
-        var parser = new DOMParser();
-        var xmlDoc = parser.parseFromString(response.payload, "text/xml");
-        var output = document.getElementById("output");
-        var status = xmlDoc.getElementsByTagName("output")[0].textContent;
-        if (status == "200")
-            output.innerHTML = "<label style='color:green'>Webhook Connection OK</label>";
-        else
-            output.innerHTML = "<label style='color:red'>Webhook Connection Failed. HTTP Status Code: " + status + "</label>";
-		document.body.style.cursor = "default";
-        return true;
-    }
-    return false;
-}
-
-function mid_server_send(mid_server, url, token) {
-	var ga = new GlideAjax("x_1070098_my_eda_0.EdaEventMidServerAjax");
+        <client_script><![CDATA[function direct_send(url, token, mid_server) {
+    var ga = new GlideAjax("x_rhtpp_eda.EdaEventDirectAjax");
     ga.addParam('sysparm_name', 'send');
+    ga.addParam('url', url);
+    ga.addParam('token', token);
 	ga.addParam('mid_server', mid_server);
-    ga.addParam('url', url);
-    ga.addParam('token', token);
-    ga.getXMLAnswer(getEccQueueId);
-}
-
-function getEccQueueId(response) {
-	ecc_id = response;
-}
-
-function direct_send(url, token) {
-    var ga = new GlideAjax("x_1070098_my_eda_0.EdaEventDirectAjax");
-    ga.addParam('sysparm_name', 'send');
-    ga.addParam('url', url);
-    ga.addParam('token', token);
     ga.getXMLAnswer(getDirectResponse);
 }
 
@@ -55,19 +18,6 @@ function getDirectResponse(response) {
 	document.body.style.cursor = "default";
 }
 
-function wait_for_mid_server(count) {
-	if (count >= 120 * 1000 / delay) {
-		output.innerHTML = "<label style='color:red'>Timed out. No response from the mid server.</label>";
-		document.body.style.cursor = "default";
-		return;
-	}
-    timeout = setTimeout(function() {
-        if (check_record())
-            return;
-        else
-			wait_for_mid_server(count + 1);
-    }, delay);
-}
 
 function webhook_test() {
 	var output = document.getElementById("output");
@@ -79,62 +29,53 @@ function webhook_test() {
 		return;
 	}
     var token = document.getElementById("webhook_token").value;
-	if (!token) {
-		alert("Token is required");
-		return;
-	}
     var mid_server = document.getElementById("mid_server").value;
 	document.body.style.cursor = "wait";
-    if (mid_server) {
-        mid_server_send(mid_server, url, token);
-        wait_for_mid_server(0);
-    } else {
-        direct_send(url, token);
-    }
+    direct_send(url, token, mid_server);
 }]]></client_script>
         <description/>
         <direct>false</direct>
-        <endpoint>x_1070098_my_eda_0_eda_configuration.do</endpoint>
+        <endpoint>x_rhtpp_eda_eda_configuration.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <g:evaluate var="jvar_check_incident_created"> 
-   var check_incident_created = gs.getProperty('x_1070098_my_eda_0.check_incident_created'); 
+   var check_incident_created = gs.getProperty('x_rhtpp_eda.check_incident_created'); 
    check_incident_created; 
 </g:evaluate>
 <g:evaluate var="jvar_check_problem_created"> 
-   var check_problem_created = gs.getProperty('x_1070098_my_eda_0.check_problem_created'); 
+   var check_problem_created = gs.getProperty('x_rhtpp_eda.check_problem_created'); 
    check_problem_created; 
 </g:evaluate>
 <g:evaluate var="jvar_check_request_created"> 
-   var check_catalog_created = gs.getProperty('x_1070098_my_eda_0.check_request_created'); 
+   var check_catalog_created = gs.getProperty('x_rhtpp_eda.check_request_created'); 
    check_catalog_created; 
 </g:evaluate>
 <g:evaluate var="jvar_check_incident_state"> 
-   var check_incident_state = gs.getProperty('x_1070098_my_eda_0.check_incident_state'); 
+   var check_incident_state = gs.getProperty('x_rhtpp_eda.check_incident_state'); 
    check_incident_state; 
 </g:evaluate>
 <g:evaluate var="jvar_check_problem_state"> 
-   var check_problem_state = gs.getProperty('x_1070098_my_eda_0.check_problem_state'); 
+   var check_problem_state = gs.getProperty('x_rhtpp_eda.check_problem_state'); 
    check_problem_state; 
 </g:evaluate>
 <g:evaluate var="jvar_check_request_approved"> 
-   var check_request_approved = gs.getProperty('x_1070098_my_eda_0.check_request_approved'); 
+   var check_request_approved = gs.getProperty('x_rhtpp_eda.check_request_approved'); 
    check_request_approved; 
 </g:evaluate>
 <g:evaluate var="jvar_check_request_state"> 
-   var check_request_state = gs.getProperty('x_1070098_my_eda_0.check_request_state'); 
+   var check_request_state = gs.getProperty('x_rhtpp_eda.check_request_state'); 
    check_request_state; 
 </g:evaluate>
 <g:evaluate var="jvar_webhook_url"> 
-   var webhook_url = gs.getProperty('x_1070098_my_eda_0.webhook_url'); 
+   var webhook_url = gs.getProperty('x_rhtpp_eda.webhook_url') || ''; 
    webhook_url; 
 </g:evaluate>
 <g:evaluate var="jvar_webhook_token"> 
-   var webhook_token = gs.getProperty('x_1070098_my_eda_0.webhook_token'); 
+   var webhook_token = gs.getProperty('x_rhtpp_eda.webhook_token') || ''; 
    webhook_token; 
 </g:evaluate>
 <g:evaluate var="jvar_mid_server"> 
-   var mid_server = gs.getProperty('x_1070098_my_eda_0.mid_server'); 
+   var mid_server = gs.getProperty('x_rhtpp_eda.mid_server') || ''; 
    mid_server; 
 </g:evaluate>
 <style>	
@@ -176,10 +117,10 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			<label style="font-size: 1.2em;">Incident</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_incident_created" value="${jvar_check_incident_created}"/>When Created</label>
+			<label><g:ui_checkbox name="check_incident_created" value="${JS,HTML:jvar_check_incident_created}"/>When Created</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_incident_state" value="${jvar_check_incident_state}"/>When State Changed</label>
+			<label><g:ui_checkbox name="check_incident_state" value="${JS,HTML:jvar_check_incident_state}"/>When State Changed</label>
 		</td>
 	</tr>
 	<tr>
@@ -187,10 +128,10 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			<label style="font-size: 1.2em;">Problem</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_problem_created" value="${jvar_check_problem_created}"/>When Created</label>
+			<label><g:ui_checkbox name="check_problem_created" value="${JS,HTML:jvar_check_problem_created}"/>When Created</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_problem_state" value="${jvar_check_problem_state}"/>When State Changed</label>
+			<label><g:ui_checkbox name="check_problem_state" value="${JS,HTML:jvar_check_problem_state}"/>When State Changed</label>
 		</td>
 	</tr>
 	<tr>
@@ -198,13 +139,13 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			<label style="font-size: 1.2em;">Catalog Request</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_request_created" value="${jvar_check_request_created}"/>When Created</label>
+			<label><g:ui_checkbox name="check_request_created" value="${JS,HTML:jvar_check_request_created}"/>When Created</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_request_state" value="${jvar_check_request_state}"/>When Request State Changed</label>
+			<label><g:ui_checkbox name="check_request_state" value="${JS,HTML:jvar_check_request_state}"/>When Request State Changed</label>
 		</td>
 		<td>
-			<label><g:ui_checkbox name="check_request_approved" value="${jvar_check_request_approved}"/>When Approved</label>
+			<label><g:ui_checkbox name="check_request_approved" value="${JS,HTML:jvar_check_request_approved}"/>When Approved</label>
 		</td>
 	</tr>
 </table>
@@ -216,15 +157,15 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			<td style="padding: 15px;">
 					<tr>
 						<td><label>Webhook URL starting with https or http *</label></td>
-						<td><input type="text" name="webhook_url" id="webhook_url" size="50" value="${jvar_webhook_url}"/></td>
+						<td><input type="text" name="webhook_url" id="webhook_url" size="50" value="${JS,HTML:jvar_webhook_url}"/></td>
 					</tr>
 					<tr>
-						<td><label>Webhook authorization token *</label></td>
-						<td><input type="password" name="webhook_token" id="webhook_token" size="50" value="${jvar_webhook_token}"/></td>
+						<td><label>Webhook authorization token</label></td>
+						<td><input type="password" name="webhook_token" id="webhook_token" size="50" value="${JS,HTML:jvar_webhook_token}"/></td>
 					</tr>
 					<tr>
-						<td><label>Mid Server configured to forward event to EDA controller on premise:</label></td>
-						<td><input type="text" name="mid_server" id="mid_server" size="50" value="${jvar_mid_server}"/></td>
+						<td><label>Mid Server configured to forward events to EDA controller on premise:</label></td>
+						<td><input type="text" name="mid_server" id="mid_server" size="50" value="${JS,HTML:jvar_mid_server}"/></td>
 					</tr>
 					<tr>
 						<td colspan="2"><p/></td>
@@ -251,38 +192,31 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 </body>
 </j:jelly>]]></html>
         <name>eda_configuration</name>
-        <processing_script><![CDATA[gs.setProperty("x_1070098_my_eda_0.check_incident_state", check_incident_state); 
-  
-gs.setProperty("x_1070098_my_eda_0.check_problem_state", check_problem_state); 
+        <processing_script><![CDATA[
+gs.setProperty("x_rhtpp_eda.check_incident_state", check_incident_state);
+gs.setProperty("x_rhtpp_eda.check_problem_state", check_problem_state);
+gs.setProperty("x_rhtpp_eda.check_request_state", check_request_state);
+gs.setProperty("x_rhtpp_eda.check_request_approved", check_request_approved);
+gs.setProperty("x_rhtpp_eda.check_request_created", check_request_created);
+gs.setProperty("x_rhtpp_eda.check_incident_created", check_incident_created);
+gs.setProperty("x_rhtpp_eda.check_problem_created", check_problem_created);
+gs.setProperty("x_rhtpp_eda.webhook_url", webhook_url || '');
+gs.setProperty("x_rhtpp_eda.webhook_token", webhook_token || '');
+gs.setProperty("x_rhtpp_eda.mid_server", mid_server || '');
 
-gs.setProperty("x_1070098_my_eda_0.check_request_state", check_request_state); 
 
-gs.setProperty("x_1070098_my_eda_0.check_request_approved", check_request_approved); 
- 
-gs.setProperty("x_1070098_my_eda_0.check_request_created", check_request_created);
-
-gs.setProperty("x_1070098_my_eda_0.check_incident_created", check_incident_created);
-
-gs.setProperty("x_1070098_my_eda_0.check_problem_created", check_problem_created);
-
-gs.setProperty("x_1070098_my_eda_0.webhook_url", webhook_url);
-
-gs.setProperty("x_1070098_my_eda_0.webhook_token", webhook_token);
-
-gs.setProperty("x_1070098_my_eda_0.mid_server", mid_server);]]></processing_script>
+]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-08-02 15:16:44</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>547cbbd31b58b110b76a0d0fdc4bcb47</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>eda_configuration</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_ui_page_547cbbd31b58b110b76a0d0fdc4bcb47</sys_update_name>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-08-02 15:19:17</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 18:27:36</sys_updated_on>
     </sys_ui_page>
 </record_update>

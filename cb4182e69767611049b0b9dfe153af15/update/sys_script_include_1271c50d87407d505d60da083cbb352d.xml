@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_1070098_my_eda_0.EdaEventDirect</api_name>
+        <api_name>x_rhtpp_eda.EdaEventDirect</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Send an event to EDA directly</description>
@@ -12,25 +12,35 @@ EdaEventDirect.prototype = {
     initialize: function() {
     },
 	
-	send: function(url, token, body, table, record_id){
+	send: function(url, token, mid, body, table, record_id){
         var req = new sn_ws.RESTMessageV2();
         req.setEndpoint(url);
-        req.setHttpMethod("post");
-        req.setRequestHeader("Authorization", "Bearer " + token);
+        req.setHttpMethod("post"); 
         req.setRequestBody(body);
+		req.setRequestHeader("Content-Type", "application/json");
+		if(mid != null && mid != "") {
+			req.setMIDServer(mid);	
+			req.setEccParameter("skip_sensor", "true");
+		}
+		if(token != null && token != "") {
+			if(mid != null && mid != "") {
+				var automation_api = new sn_automation.AutomationAPI();
+				token = automation_api.encrypt(token);
+			}
+			req.setRequestHeader("Authorization", "Bearer " + token);
+		}
 
-		var tID = gs.generateGUID();
-		gs.info("Sending EDA event ({0} sys_id={1}). Tracking_id={2}.", table, record_id, tID);
-
-        var response = req.execute();
-        status = response.getStatusCode();
+		gs.info("Sending EDA event ({0} sys_id={1}).", table, record_id);
+		
+		var response = req.execute();
+		var status = response.getStatusCode();
 		if(status == "200") {
-			gs.info("EDA event (tracking_id={0}) sent with HTTP status: {1}", tID, status);
+			gs.info("EDA event ({0} sys_id={1}) sent with HTTP status: {2}", table, record_id, status);
 		}
 		else {
-			gs.error("Failed to send EDA event (tracking_id={0}). HTTP status: {1}", tID, status);
+			gs.error("Failed to send EDA event ({0} sys_id={1}). HTTP status: {2}", table, record_id, status);
 		}
-        return status;		
+		return status;
 	},
 
     type: 'EdaEventDirect'
@@ -39,16 +49,14 @@ EdaEventDirect.prototype = {
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>bill_wei</sys_created_by>
         <sys_created_on>2023-07-13 15:50:02</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>1271c50d87407d505d60da083cbb352d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>EdaEventDirect</sys_name>
-        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_1070098_my_eda_0">cb4182e69767611049b0b9dfe153af15</sys_package>
+        <sys_package display_value="Event-Driven Ansible Notification Service" source="x_rhtpp_eda">cb4182e69767611049b0b9dfe153af15</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Event-Driven Ansible Notification Service">cb4182e69767611049b0b9dfe153af15</sys_scope>
         <sys_update_name>sys_script_include_1271c50d87407d505d60da083cbb352d</sys_update_name>
-        <sys_updated_by>bill_wei</sys_updated_by>
-        <sys_updated_on>2023-07-14 15:27:44</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-21 07:22:13</sys_updated_on>
     </sys_script_include>
 </record_update>
